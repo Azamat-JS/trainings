@@ -53,14 +53,12 @@
 //     }
 //     catch(error){
 //         console.error(error);
-        
+
 //     }
 // }
 // console.log(getData());
 
 //--------------------------------
-
-
 
 //-------------------------- await with setTimeout ----------------
 // function delay(ms){
@@ -70,8 +68,7 @@
 //     console.log('is being waited...');
 //     await delay(2000);
 //     console.log('launched after two seconds');
-    
-    
+
 // }
 // example()
 
@@ -83,7 +80,7 @@
 //         setTimeout(() => {
 //             resolve({name: "Ali", age: 24})
 //         }, 2000)
-        
+
 //     })
 // }
 // async function processUserData() {
@@ -123,8 +120,6 @@
 // }
 // runTasks()
 
-
-
 //-------------- run tasks ---------------
 // async function task1() {
 //     return new Promise (resolve => setTimeout(() => resolve("task 1 is done"), 2000))
@@ -137,8 +132,6 @@
 // async function task3() {
 //     return new Promise(resolve => setTimeout(() => resolve("task 3 is done"), 500))
 // }
-
-
 
 // async function runAllTasks() {
 //     const results = await Promise.all([task1(), task2(), task3() ])
@@ -154,7 +147,7 @@
 //         await countDown(num - 1)
 //     }else{
 //         console.log("well done!");
-        
+
 //     }
 // }
 // countDown(5)
@@ -168,21 +161,23 @@
 //         await countUp (dig + 1)
 //     }else{
 //         console.log("your order is ready!");
-        
+
 //     }
 // }
 // countUp(3)
 
 //--------------- async with arrow function -------------
 
-const countDown = async (n) =>{
-    if(n < 100){
-        console.log(n);
-        await new Promise(resolve => setTimeout(resolve, 1000))
-        await countDown (n + 10)
-}else{
-    console.log("tayyor!");
-    
-}
-}
-countDown(70)
+// const countDown = async (n) =>{
+//     if(n < 100){
+//         console.log(n);
+//         await new Promise(resolve => setTimeout(resolve, 1000))
+//         await countDown (n + 10)
+// }else{
+//     console.log("tayyor!");
+
+// }
+// }
+// countDown(70)
+
+//------------------
