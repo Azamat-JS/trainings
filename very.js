@@ -65,3 +65,13 @@
 
 // console.log(longestCommonPrefix(['tea', 'teacher', 'tear']))
 // console.log(longestCommonPrefix(['flower', 'flow', 'flight']))
+
+//------------- 5
+
+// function findDifference(arr1, arr2){
+//    let bigArr = arr1.concat(arr2)
+//   let result = bigArr.filter((item, index, self) => self.indexOf(item) === self.lastIndexOf(item))
+// return result
+//         }
+// console.log(findDifference([2, 4, 1], [2, 3, 8]));
+// console.log(findDifference([5, 1, 8, 90], [2, 5, 8, 10]));
