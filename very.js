@@ -75,3 +75,24 @@
 //         }
 // console.log(findDifference([2, 4, 1], [2, 3, 8]));
 // console.log(findDifference([5, 1, 8, 90], [2, 5, 8, 10]));
+
+
+//------------------
+
+// let arrObj = [
+//     {name: "sherzod", age: 30},
+//     {name:"alisher", age: 23},
+//     {name: "jasur", age: 34}
+// ]
+
+// function upper(arr){
+//  const uppercase = arr.map(names => ({
+//         ...names,
+//         name: names.name.toUpperCase()
+//     }))
+//     return uppercase
+// }
+
+// const updated = upper(arrObj)
+// console.log(updated);
+

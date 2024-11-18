@@ -181,3 +181,66 @@
 // countDown(70)
 
 //------------------
+
+// const myPromise = new Promise((resolve, reject) => {
+//     let res = true
+//     return res ? resolve("it is working well") : reject("error")
+// })
+// myPromise.then((res) => console.log(res)).catch((err) => console.error(err))
+
+//----------------- await doesn't wait setTimeOut -------------
+
+// async function myFunc() {
+//   await  setTimeout(() => {
+//       console.log("setTimeOut ishladi");
+//     }, 2000);
+//     console.log('pasti ishladi');
+    
+// }
+// console.log(myFunc());
+
+//--------------------
+
+// async function  ourFunc() {
+//     await new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve()
+//             console.log('setTimeOut ishlaD');    
+//         }, 2000)
+//         console.log('PASTI ishladi');
+//     }
+// )}
+// ourFunc()
+
+//-------------------------
+
+// function waitTime(time){
+//     return new Promise ((resolve) => {
+//         setTimeout(() => {
+//             resolve()
+//         }, time)
+//     })
+    
+// }
+// async function doThis() {
+//     console.log(("1: boshlanmoqda..."))
+//     await waitTime(2000)
+//     console.log("2 - tugadi");
+// }
+// doThis()
+
+//--------------------------- simple setTimeOut
+
+// async function wrongCode() {
+//     console.log("1. this is starting...");
+//     await setTimeout(() => {
+//         console.log("2. finshed");
+        
+//     }, 2000)
+//     console.log("3. ended");
+    
+// }
+// wrongCode()
+
+
+
