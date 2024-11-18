@@ -242,5 +242,64 @@
 // }
 // wrongCode()
 
+//----------------- promise 
+
+// console.log("1. starting point");
+
+// setTimeout(() => {
+//     console.log("2 .setTimeout");
+// },0)
+
+// Promise.resolve().then(() => {
+//     console.log("3.promise");   
+// })
+
+// console.log("4 oxiri");
+
+//----------------
+//  setTimeout(() => {
+//     console.log("1, settimeout");
+//     Promise.resolve().then(() =>{
+//         console.log("2. promise inside")
+//     })
+//  }, 0)
+
+//  Promise.resolve().then(() =>{
+//     console.log("3. promise outside")
+//  })
+//  console.log("4.ending part");
+ 
+//--------------------
+
+// setTimeout(() =>{
+//     console.log("1. first setTimeout");
+//     setTimeout(() =>{
+//         console.log("2.second setTimeout");
+//     },0)   
+// },0)
+
+// Promise.resolve().then(() => {
+//     console.log("3. promise")
+// })
+// console.log("4.finish");
+//-------------------------
+
+// console.log("1. starting");
+
+// setTimeout(() => {
+//     console.log("2. setTimeout");
+//     Promise.resolve().then(() => {
+//         console.log("3. promise inside");
+//     })
+// }, 0)
+
+// Promise.resolve().then(() => {
+//     console.log("4. promise outside");
+
+//     setTimeout(() => {
+//         console.log("5. setTimeout inside");
+//     }, 0);
+// })
+// console.log("6 ending");
 
 
