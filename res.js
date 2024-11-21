@@ -195,7 +195,7 @@
 //       console.log("setTimeOut ishladi");
 //     }, 2000);
 //     console.log('pasti ishladi');
-    
+
 // }
 // console.log(myFunc());
 
@@ -205,7 +205,7 @@
 //     await new Promise((resolve, reject) => {
 //         setTimeout(() => {
 //             resolve()
-//             console.log('setTimeOut ishlaD');    
+//             console.log('setTimeOut ishlaD');
 //         }, 2000)
 //         console.log('PASTI ishladi');
 //     }
@@ -220,7 +220,7 @@
 //             resolve()
 //         }, time)
 //     })
-    
+
 // }
 // async function doThis() {
 //     console.log(("1: boshlanmoqda..."))
@@ -235,14 +235,14 @@
 //     console.log("1. this is starting...");
 //     await setTimeout(() => {
 //         console.log("2. finshed");
-        
+
 //     }, 2000)
 //     console.log("3. ended");
-    
+
 // }
 // wrongCode()
 
-//----------------- promise 
+//----------------- promise
 
 // console.log("1. starting point");
 
@@ -251,7 +251,7 @@
 // },0)
 
 // Promise.resolve().then(() => {
-//     console.log("3.promise");   
+//     console.log("3.promise");
 // })
 
 // console.log("4 oxiri");
@@ -268,14 +268,14 @@
 //     console.log("3. promise outside")
 //  })
 //  console.log("4.ending part");
- 
+
 //--------------------
 
 // setTimeout(() =>{
 //     console.log("1. first setTimeout");
 //     setTimeout(() =>{
 //         console.log("2.second setTimeout");
-//     },0)   
+//     },0)
 // },0)
 
 // Promise.resolve().then(() => {
@@ -301,5 +301,3 @@
 //     }, 0);
 // })
 // console.log("6 ending");
-
-

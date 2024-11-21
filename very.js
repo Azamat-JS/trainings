@@ -1,18 +1,18 @@
 //-------- 1
-// function myFunc(arr) {
-//         let big = 0
-//         let a = 0
-//         for (let i = 0; i < arr.length; i++) {
-//             if (arr[i] < arr[i + 1]) {
-//                 a += 1
-//             }else if(big < a){
-//                 big = a
-//                 a = 0
-//             }
-//         }
-//         return big + 1
-//     }
-//     console.log(myFunc([12,22, 30, 5,6,7,8,9, 3]));
+function myFunc(arr) {
+        let big = 0
+        let a = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < arr[i + 1]) {
+                a += 1
+            }else if(big < a){
+                big = a
+                a = 0
+            }
+        }
+        return big + 1
+    }
+    console.log(myFunc([12,22, 30, 5,6,7,8,9, 3]));
 
 //----------- 2
 
@@ -156,7 +156,7 @@
 
 // function closestFibonacciNumbers(n) {
 //     let fibSequence = [0, 1]; // Initialize with the first two Fibonacci numbers
-    
+
 //     // Generate Fibonacci sequence until the numbers surpass 'n'
 //     while (fibSequence[fibSequence.length - 1] < n) {
 //         let nextFib = fibSequence[fibSequence.length - 1] + fibSequence[fibSequence.length - 2];
@@ -177,4 +177,78 @@
 
 // const result = closestFibonacciNumbers(10);
 // console.log(result); // Output: [8, 13]
+
+//---------------------- advanced work with objects
+
+// const stats = {
+//     max: 56.78,
+//     standard_deviation: 4.34,
+//     median: 34.54,
+//     mode: 23.87,
+//     min: -0.75,
+//     average: 35.85
+// }
+
+// const half = (function(){
+//     return function({ min, max}){
+//         return (max + min) / 2
+//     }
+// })()
+// console.log(stats)
+// console.log(half(stats));
+
+//----------------------------- matrix --------------------
+
+// function spiralOrder(matrix) {
+//   const result = [];
+//   if (matrix.length === 0) return result;
+
+//   let top = 0,
+
+//     bottom = matrix.length - 1;
+//   let left = 0,
+//     right = matrix[0].length - 1;
+
+//   while (top <= bottom && left <= right) {
+//     // Traverse from left to right along the top row
+//     for (let i = left; i <= right; i++) {
+//       result.push(matrix[top][i]);
+//     }
+//     top++; // Move the top boundary down
+
+//     // Traverse downwards along the right column
+//     for (let i = top; i <= bottom; i++) {
+//       result.push(matrix[i][right]);
+//     }
+//     right--; // Move the right boundary left
+
+//     if (top <= bottom) {
+//       // Traverse from right to left along the bottom row
+//       for (let i = right; i >= left; i--) {
+//         result.push(matrix[bottom][i]);
+//       }
+//       bottom--; // Move the bottom boundary up
+//     }
+
+//     if (left <= right) {
+//       // Traverse upwards along the left column
+//       for (let i = bottom; i >= top; i--) {
+//         result.push(matrix[i][left]);
+//       }
+//       left++; // Move the left boundary right
+//     }
+//   }
+
+//   return result;
+// }
+
+// const matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// console.log(spiralOrder(matrix)); // Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
+
+//---------------- count increments ------------------
+
 
