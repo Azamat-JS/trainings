@@ -113,4 +113,175 @@
 
 // book.call(behruzbekAirways, "Muhammadali", 2)
 
-//--------------------- 
+//--------------------- object iterator -----------------
+
+// let range = {
+//     from: 1,
+//     to: 5,
+
+//     [Symbol.iterator](){
+//         return {
+//             current: this.from,
+//             last: this.to,
+
+//             next(){
+//                 if(this.current <= this.last){
+//                     return {done: false, value: this.current++}
+//                 }else{
+//                     return { done: true}
+//                 }
+//             }
+//         }
+//     }
+// }
+// for (const value of range) {
+//     console.log(value);
+    
+// }
+
+//---------------------- Async object iteration ---------------
+
+// let range = {
+//     from: 1,
+//     to: 5,
+  
+//     [Symbol.asyncIterator]() { // (1)
+//       return {
+//         current: this.from,
+//         last: this.to,
+  
+//         async next() { // (2)
+  
+//           // note: we can use "await" inside the async next:
+//           await new Promise(resolve => setTimeout(resolve, 1000)); // (3)
+  
+//           if (this.current <= this.last) {
+//             return { done: false, value: this.current++ };
+//           } else {
+//             return { done: true };
+//           }
+//         }
+//       };
+//     }
+//   };
+  
+//   (async () => {
+  
+//     for await (let value of range) { // (4)
+//       console.log(value); // 1,2,3,4,5
+//     }
+  
+//   })()
+
+//---------
+
+// let range = {
+//     from: 1,
+//     to: 5,
+  
+//     *[Symbol.iterator]() { // a shorthand for [Symbol.iterator]: function*()
+//       for(let value = this.from; value <= this.to; value++) {
+//         yield value;
+//       }
+//     }
+//   };
+  
+//   for(let value of range) {
+//   console.log(value); // 1, then 2, then 3, then 4, then 5
+//   }
+  //-=---------------- Recall generators ---------------
+
+//   function* generateSequence(start, end) {
+//     for (let i = start; i <= end; i++) {
+//       yield i;
+//     }
+//   }
+  
+//   for(let value of generateSequence(1, 5)) {
+//     console.log(value); // 1, then 2, then 3, then 4, then 5
+//   }
+
+//------------ Async generators ------------------
+
+// async function* generateSequence(start, end) {
+//     for(let i = start; i <= end; i++){
+//         await new Promise(resolve => setTimeout(resolve, 1000));
+//         yield i;
+//     }
+// }
+// (async () => {
+//     let generator = generateSequence(1, 5)
+//     for await (let value of generator){
+//         console.log(value)
+//     }
+// })();
+//---------------------------
+
+// async function* generateSequence(start, end) {
+
+//     for (let i = start; i <= end; i++) {
+  
+//       // Wow, can use await!
+//       await new Promise(resolve => setTimeout(resolve, 1000));
+  
+//       yield i;
+//     }
+  
+//   }
+  
+//   (async () => {
+  
+//     let generator = generateSequence(1, 5);
+//     for await (let value of generator) {
+//       console.log(value); // 1, then 2, then 3, then 4, then 5 (with delay between)
+//     }
+  
+//   })();
+
+//---------------- Async iterable range ------------------
+
+// let range = {
+//     from: 1,
+//     to: 5,
+  
+//     // this line is same as [Symbol.asyncIterator]: async function*() {
+//     async *[Symbol.asyncIterator]() {
+//       for(let value = this.from; value <= this.to; value++) {
+  
+//         // make a pause between values, wait for something
+//         await new Promise(resolve => setTimeout(resolve, 1000));
+  
+//         yield value;
+//       }
+//     }
+//   };
+  
+//   (async () => {
+  
+//     for await (let value of range) {
+//       console.log(value); // 1, then 2, then 3, then 4, then 5
+//     }
+  
+//   })();
+
+//------------------- 
+// let ranges = {
+//     from: 1,
+//     to: 5,
+
+//     async *[Symbol.asyncIterator](){
+
+//         for (let value = this.from; value <= this.to; value++) {
+
+//             await new Promise(resolve => setTimeout(resolve, 1000))
+
+//             yield value
+            
+//         }
+//     }
+// };
+// (async () => {
+//     for await (let value of ranges){
+//         console.log(value);
+//     }
+// })();
