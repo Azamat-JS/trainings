@@ -1,30 +1,25 @@
 //-------- 1
-function myFunc(arr) {
-        let big = 0
-        let a = 0
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] < arr[i + 1]) {
-                a += 1
-            }else if(big < a){
-                big = a
-                a = 0
-            }
-        }
-        return big + 1
-    }
-    console.log(myFunc([12,22, 30, 5,6,7,8,9, 3]));
+// function myFunc(arr) {
+//         let big = 0
+//         let a = 0
+//         for (let i = 0; i < arr.length; i++) {
+//             if (arr[i] < arr[i + 1]) {
+//                 a += 1
+//             }else if(big < a){
+//                 big = a
+//                 a = 0
+//             }
+//         }
+//         return big + 1
+//     }
+//     console.log(myFunc([12,22, 30, 5,6,7,8,9, 3]));
 
 //----------- 2
 
 // // add 1 ------------------------------------------------
-// function triangle(array) {
+// function tr
 
-//   for (let i = 0; i < array.length; i++) {
-//     tashqi = (array.length - array[i].length )
-//        console.log(" ".repeat(tashqi) + array[i].join(" "))
-//   }
-//   }
-// triangle([[2], [3,4], [6,5,7], [4,1,8,3], [11, 12, 13, 14]]);
+;
 
 //-------- 3
 
@@ -209,7 +204,7 @@ function myFunc(arr) {
 //   let left = 0,
 //     right = matrix[0].length - 1;
 
-//   while (top <= bottom && left <= right) {
+//   while (top <= bottom && left <= right) {d
 //     // Traverse from left to right along the top row
 //     for (let i = left; i <= right; i++) {
 //       result.push(matrix[top][i]);
@@ -248,7 +243,5 @@ function myFunc(arr) {
 //   [7, 8, 9],
 // ];
 // console.log(spiralOrder(matrix)); // Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
-
-//---------------- count increments ------------------
 
 
