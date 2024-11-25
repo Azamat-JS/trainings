@@ -597,4 +597,11 @@ console.log(testEqual(12))*/
 
 // for (let i of arr) {
 //     console.log(i + 3)}
+
+//---------------------
+
+// let [name1, name2, ...rest] = ["jasur", "feruz", "umr", "temur ali keldi"]
+// console.log(rest[0]);
+// console.log(rest[1]);
+
     

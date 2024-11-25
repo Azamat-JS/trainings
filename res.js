@@ -1,7 +1,7 @@
 //------------------------- promise --------------------
 
 // let newPromise = new Promise((resolve, reject) => {
-//     let test = false
+//     let test = true
 //     if (test){
 //         resolve('muvaffaqiyatli bajarildi')
 //     }else{
@@ -18,7 +18,7 @@
 // const resolvedPromise = Promise.resolve("this promise is done")
 // resolvedPromise.then(console.log)
 
-//---------------------- rejected promise-------
+// ---------------------- rejected promise-------
 // const rejectedPromise = Promise.reject("this promise isn't done")
 // rejectedPromise.catch(console.log)
 
@@ -32,14 +32,15 @@
 //----------------- promise race -------------------
 
 // const promise4 = new Promise((resolve) => setTimeout(resolve, 500, '500ms'))
-// const promise5 = new Promise((resolve) => setTimeout(resolve, 100, '100ms'))
+// const promise5 = new Promise((resolve) => setTimeout(resolve, 700, '700ms'))
+// const promise6 = new Promise((resolve) => setTimeout(resolve, 400, '400ms'))
 
-// Promise.race([promise4, promise5]).then((value) => {console.log(value)})
+// Promise.race([promise4, promise5, promise6]).then((value) => {console.log(value)})
 
 //------------------------------ async funtion --------------------
 
 // let myPromise = new Promise((resolve, reject) => {
-//     let test = true
+//     let test = false
 //     if (test){
 //         resolve('muvaffaqiyatli bajarildi')
 //     }else{
@@ -72,6 +73,7 @@
 // }
 // example()
 
+
 //-------------------- this function emulates getting info from users -----
 
 // function getUserData(){
@@ -94,7 +96,7 @@
 
 //---------------------- first and second orders --------------------
 
-// async function firstTask() {
+// function firstTask() {
 //     return new Promise(resolve => {
 //         setTimeout(() => {
 //             console.log("the first task is done");
@@ -103,7 +105,7 @@
 //     })
 // }
 
-// async function secondTask() {
+// function secondTask() {
 //     return new Promise(resolve => {
 //         setTimeout(() => {
 //             console.log("the second task is done");
@@ -114,7 +116,7 @@
 // async function runTasks() {
 //     const result1 = await firstTask()
 //     console.log(result1)
-
+    
 //     const result2 = await secondTask()
 //     console.log(result2);
 // }
@@ -199,7 +201,7 @@
 // }
 // console.log(myFunc());
 
-//--------------------
+//-------------------- 
 
 // async function  ourFunc() {
 //     await new Promise((resolve, reject) => {
@@ -225,7 +227,9 @@
 // async function doThis() {
 //     console.log(("1: boshlanmoqda..."))
 //     await waitTime(2000)
-//     console.log("2 - tugadi");
+//     console.log("2: davom etmoqda...");
+//     await waitTime(1000)
+//     console.log("3 - tugadi");
 // }
 // doThis()
 

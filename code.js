@@ -85,7 +85,17 @@
 // console.log(countBits(7));
 // console.log(countBits(1023));
 
-//-----------------------
+//------------------ find names ---------------
+
+// function findName(arr){
+//   let myPeers = ['Murod', 'Ahmad']
+// let newArr = arr.filter((name) => myPeers.includes(name))
+// return newArr
+//   }
+
+// console.log(findName(['Aziz', 'Odil']));
+//------------------------------------ find errors --------------
+
 
 
 

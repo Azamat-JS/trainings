@@ -285,3 +285,40 @@
 //         console.log(value);
 //     }
 // })();
+
+//------------------------------- multiply values of Object --------------
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// };
+
+// function multiply (object){
+//   for (const key in object) {
+//        if(typeof object[key] === typeof 3){
+//        object[key] *= 2
+//        }
+//   }
+//   return object
+// }
+// console.log(multiply(menu));
+
+//------------------------------- Map iteration -------------
+
+// let user = new Map()
+
+// user.set("name", "John")
+// user.set("age", "30")
+// for(let [key, value] of user){
+//   console.log(`${key}: ${value}`);
+// }
+
+//------------------------ Object entries iteration ----------
+
+// let user = {
+//   name: "Jane",
+//   age: 20
+// }
+// for(let [key, value] of Object.entries(user)){
+//   console.log(`${key}: ${value}`);
+// }
