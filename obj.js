@@ -322,3 +322,45 @@
 // for(let [key, value] of Object.entries(user)){
 //   console.log(`${key}: ${value}`);
 // }
+
+//===================  object simple copying ============
+
+// let user = {
+//   name: "John",
+//   age: 30
+// }
+// let clone = {}
+
+// for (const key in user) {
+//     clone[key] = user[key]
+//   }
+// console.log(Object.entries(clone));
+
+//------------- object assign ------------------
+
+// let user = {
+//   name: "John",
+//   age: 30
+// }
+
+
+// let clone = Object.assign({}, user)
+// console.log(clone);
+//---------- nested object assign --------------
+
+// let person = {
+//   name: "Jasur",
+//   sizes:{
+//     height: 182,
+//     weight: 50
+//   }
+// }
+// let clone = Object.assign({}, person)
+// console.log(clone.sizes === person.sizes);
+
+//--------------- copying objects -------------
+
+// let obj = {a: 1, b: 2, c: 3, d: 4}
+
+// let copyObj = { ...obj }
+// console.log(copyObj);
