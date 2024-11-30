@@ -94,8 +94,80 @@
 //   }
 
 // console.log(findName(['Aziz', 'Odil']));
-//------------------------------------ find errors --------------
 
+//------------------ homeworks ---------------
+
+//--------------- 1 - vazifa -----------------------
+
+// function rearrange(arr){
+//   arr.sort((a, b) => a - b)
+//   let emptyArr = []
+//   let left = 0
+//   let right = arr.length - 1
+
+//   while(left <= right){
+//     if(left <= right){
+//       emptyArr.push(arr[right])
+//       right--
+//     }
+//    if(left <= right){
+//      emptyArr.push(arr[left])
+//      left++
+//    }
+
+//   }
+//   return emptyArr
+// }
+// console.log(rearrange([3, 1, 4, 1, 5, 9, 2]));
+// console.log(rearrange([38, 61, 24, 14, 51, 19, 20]));
+
+//------------------- 2 - vazifa -------------
+
+// function findUniqueWords(str){
+//   let words = str.split(" ")
+// let emptyObj = {}
+// words.forEach(word => {emptyObj[word] = (emptyObj[word] || 0) + 1});
+
+// return words.filter((item => emptyObj[item] === 1))
+// }
+
+// console.log(findUniqueWords("apple banana apple orange banana kiwi orange grape"));
+
+// ----------------------- 3 - vazifa -----------------------
+
+// function findLongestWord(array){
+//   let max = []
+//   for (let i = 0; i < array.length; i++) {
+//      max.push(array[i].length)
+//     }
+//     let find = Math.max(...max)
+//     return array.filter(item => array.indexOf(item) === max.indexOf(find))
+// }
+// console.log(findLongestWord(['apple', 'banana', 'grapefruit', 'kiwi']));
+
+// ----------------------- 4 - vazifa ----------------------
+
+// function reverseNums(wordNum){
+//   let nums = []
+//   let ind = []
+//   for (let i = 0; i < wordNum.length; i++) {
+//     if(Number(wordNum[i] - 0)){
+//       nums.push(wordNum[i])
+//       ind.push(i)
+//     }
+    
+//   }
+//   nums.reverse()
+//   let newArr = wordNum.split("")
+//   for (let j = 0; j < newArr.length; j++) {
+//     newArr[ind[j]] = nums[j]
+    
+//   }
+//   return newArr.join("")
+// }
+
+// console.log(reverseNums('ab1cd2ef3gh'));
+// console.log(reverseNums('ab3c4e5gh7'));
 
 
 
