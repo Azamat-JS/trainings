@@ -187,17 +187,38 @@
 
 //--------------- 6 - vazifa ---------------------
 
-function formatPhoneNumber(numbers){
-  const [a, b, c, d, e, f, g, k, l, m] = numbers
-  if(numbers.length < 10 || numbers.length > 10){
-    console.log("You should fill the input properly");
-  }else{
-    console.log(`(${a}${b}${c}) ${d}${e}${f}-${g}${k}${l}${m}`)
-  }
+// function formatPhoneNumber(numbers){
+//   const [a, b, c, d, e, f, g, k, l, m] = numbers
+//   if(numbers.length < 10 || numbers.length > 10){
+//     console.log("You should fill the input properly");
+//   }else{
+//     console.log(`(${a}${b}${c}) ${d}${e}${f}-${g}${k}${l}${m}`)
+//   }
 
-}
-formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
-formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 5])
+// }
+// formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+// formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 5])
 
+//------------------------ 7 - vazifa -------------------
 
+// function toArray(numbers){
+//   let fill = []
+//  let newNums = numbers.toString().split("")
+//  for (let i = 0; i < newNums.length; i++) {
+//      fill.push(newNums[i] - 0)
+//  }
+//   return fill
+// }
+// console.log(toArray(76530));
+// console.log(toArray(235));
 
+//------------------------- 
+// function toNumber (array){
+//   let str = ""
+// for (const nums of array) {
+//   str += nums
+// }
+// return str - 0
+// }
+// console.log(toNumber([2, 3, 5]));
+// console.log(toNumber([0]));
