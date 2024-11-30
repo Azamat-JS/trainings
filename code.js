@@ -222,3 +222,19 @@
 // }
 // console.log(toNumber([2, 3, 5]));
 // console.log(toNumber([0]));
+
+//---------------------- 8 - vazifa --------------
+
+// function measureDepth(arr) {
+//   if (!Array.isArray(arr)) {
+//     return 0;
+//   }
+//   let depth = 1 + (arr.length > 0 ? Math.max(...arr.map(measureDepth)) : 0);
+  
+//   return depth;
+// }
+// console.log(measureDepth([[[]]])); 
+// console.log(measureDepth([[[[[[[]]]]]]]));   
+// console.log(measureDepth([1, 2, 3]))
+
+
