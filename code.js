@@ -169,6 +169,35 @@
 // console.log(reverseNums('ab1cd2ef3gh'));
 // console.log(reverseNums('ab3c4e5gh7'));
 
+//------------------ 5 - vazifa ---------------
+
+// function findCommonElements(arr1, arr2){
+//   let arr = []
+//   for (const element of arr1) {
+//     for (const item of arr2) {
+//       if(element === item){
+//         arr.push(element)
+//       }
+//     }
+//   }
+//   return arr
+//   }
+//   console.log(findCommonElements([1, 2, 3, 4, 5], [2, 9, 4, 11]));
+//   console.log(findCommonElements([12, 11, 44, 65], [12, 39, 94, 11]));
+
+//--------------- 6 - vazifa ---------------------
+
+function formatPhoneNumber(numbers){
+  const [a, b, c, d, e, f, g, k, l, m] = numbers
+  if(numbers.length < 10 || numbers.length > 10){
+    console.log("You should fill the input properly");
+  }else{
+    console.log(`(${a}${b}${c}) ${d}${e}${f}-${g}${k}${l}${m}`)
+  }
+
+}
+formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+formatPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 5])
 
 
 
