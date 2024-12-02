@@ -244,3 +244,6 @@
 // ];
 // console.log(spiralOrder(matrix)); // Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
 
+
+//------------------ myReduce ----------------
+

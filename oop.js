@@ -96,3 +96,18 @@
 // const phone = new Phone ("Iphone 16")
 // phone.showModel()
 // phone.showBrand("Apple")
+
+//------------------- class makes obj --------------
+
+// class Person {
+//     constructor(name, age){
+//         this.name = name
+//         this.age = age
+//     }
+// }
+// const myObj = new Person("Ali", 30)
+// myObj.money = 5000
+// myObj["address"] = "Ulug'bek"
+// console.log(myObj);
+//------------------------- 
+
