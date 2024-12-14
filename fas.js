@@ -18,7 +18,6 @@
 
 //---------------------------- 2 - vazifa -------------------
 
-
 //-------------------------- 3 - vazifa -------------------
 
 // function minPairSum(arr0){
@@ -158,3 +157,85 @@
 // }
 // console.log(minSumPair([3, 8, 5, 2, 7]));
 // console.log(minSumPair([1, 90, 15, 12, 7]));
+
+//--------- problems  1 -------------
+
+// let a = -9
+// if(a < 0){
+//     console.log('manfiy');
+// }else{
+//     console.log('musbat');
+// }
+
+//------- 2
+
+// let num4 = [1, 2, 3, -4]
+// let sum = 0
+// for (let i = 0; i < num4.length; i++) {
+//     if(num4[i] > 0){
+//         sum++
+
+//     }
+// }
+// console.log(sum);
+
+//------ 3
+
+// let num4 = [1, 2, 3, -4]
+// let musbat = 0
+// let manfiy = 0
+// for (let i = 0; i < num4.length; i++) {
+//     if(num4[i] > 0){
+//         musbat++
+//     }    else if(num4[i] === 0){
+
+//     }else{
+//         manfiy++
+//     }
+// }
+// console.log(`manfiylar:${manfiy}, musbatlar:${musbat}`);
+
+//------------ 4
+
+// function findBiggest(...nums){
+//  let sorted =  nums.sort((a, b) => a- b)
+//  return sorted[sorted.length - 1]
+// }
+// console.log(findBiggest(12, 55, 33));
+
+// ---------------- 5
+
+// let b = 3
+// if(b > -1){
+//     b++
+// }
+// console.log(b);
+
+//----------- 6
+
+// let u = -9
+// if(u < 0){
+//     u -= 2
+// }else{
+//     u++
+// }
+// console.log(u);
+
+//------ 7
+
+// function makeGreat(num){
+//     return num ** 2
+// }
+// console.log(makeGreat(4));
+
+//-------- 8
+
+// function weekdays(num) {
+//   let week = { mon: 1, tue: 2, wed: 3, thurs: 4, friday: 5, satur: 6, sun: 7 };
+//   for (let [key, value] of Object.entries(week)) {
+//       if(num === value){
+//         return key
+//       }
+//   }
+// }
+// console.log(weekdays(5))
