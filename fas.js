@@ -265,16 +265,46 @@
 
 //------------11
 
-function checkNums(...nums){
-    toq = 0;
-    juft = 0;    
-    for (let num of nums) {
-        if(num % 2 === 0){
-          juft++
-        }else{
-           toq++
-        }
+// function checkNums(...nums){
+//     toq = 0;
+//     juft = 0;    
+//     for (let num of nums) {
+//         if(num % 2 === 0){
+//           juft++
+//         }else{
+//            toq++
+//         }
+//     }
+//     return `toqlar soni: ${toq}, va juftlar soni: ${juft}`
+// }
+// console.log(checkNums(3, 34, 55, 23, 12));
+
+
+//-------------- 12
+
+class Counter{
+    constructor(init){
+        this.init = init;
+        this.count = init
     }
-    return `toqlar soni: ${toq}, va juftlar soni: ${juft}`
+    increment(){
+        this.count+=1;
+        return this.count
+    }
+    decrement(){
+        this.count-=1
+        return this.count
 }
-console.log(checkNums(3, 34, 55, 23, 12));
+reset(){
+    this.count = this.init
+    return this.count
+}
+}
+var createCounter = function(init){
+    return new Counter(init)
+}
+
+const result = createCounter(5)
+console.log(result);
+
+  
