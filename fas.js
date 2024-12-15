@@ -239,3 +239,42 @@
 //   }
 // }
 // console.log(weekdays(5))
+
+//------------- 9
+
+// function division(num){
+//     if(num % 3 === 0){
+//         return 'bo\'linadi'
+//     }else{
+//         return 'bo\'linmaydi'
+//     }
+// }
+// console.log(division(7));
+
+
+//------------10
+
+// let number = 27
+// if(number % 2 === 0){
+//     return console.log('juft son');
+    
+// }else{
+//     console.log('toq son');
+    
+// }
+
+//------------11
+
+function checkNums(...nums){
+    toq = 0;
+    juft = 0;    
+    for (let num of nums) {
+        if(num % 2 === 0){
+          juft++
+        }else{
+           toq++
+        }
+    }
+    return `toqlar soni: ${toq}, va juftlar soni: ${juft}`
+}
+console.log(checkNums(3, 34, 55, 23, 12));
