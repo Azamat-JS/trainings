@@ -188,26 +188,24 @@
 
 //---------------------------------------------------
 
-let aliRes = {
- food: "plov",
- drink: "tea",
- snack: "tomato",
- order(quantity, table){
-    console.log(`you ordered ${quantity} ${this.food} with ${this.drink} and ${this.snack} to ${table}-table`)
- }
+let myCafe = {
+  meal: 'palov',
+  drink: 'tea',
+  desert: 'honey',
+  service(amount, table){
+   return `your order is ${amount} ${this.meal} and ${amount} ${this.drink} to ${table} table`  }
 }
-aliRes.order(1, 22)
+console.log(myCafe.service(2, 31));
 
 
-let odilRes = {
-    food: "cake",
-    drink: "coffee",
-    snack: "chocolate"
+let ourCafe = {
+  meal: 'palov',
+  drink: 'tea',
+  desert: 'honey'
 }
 
-let order = aliRes.order
-
-order.call(odilRes, 2, 10)
+let service = myCafe.service
+console.log(service.call(ourCafe, 3, '10-'));
 
 //////////// apply method
 
