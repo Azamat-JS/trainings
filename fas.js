@@ -308,22 +308,34 @@
 // console.log(result);
 
 //============= 13
-function fn (m){
-    if(m){
-        return m
-    }
-}
-let filter = (arr, fn) => {
-    let sort = []
-    for (let i = 0; i < arr.length; i++) {
-     if(fn(arr[i], i)){
-        sort.push(arr[i])
-     }
+// function fn (m){
+//     if(m){
+//         return m
+//     }
+// }
+// let filter = (arr, fn) => {
+//     let sort = []
+//     for (let i = 0; i < arr.length; i++) {
+//      if(fn(arr[i], i)){
+//         sort.push(arr[i])
+//      }
         
-    }
-    return sort
+//     }
+//     return sort
+// }
+// console.log(filter([20, 30, 21, 12], fn));
+
+//---------------- 14
+
+function fn(value, num){
+  return value + num
 }
-console.log(filter([20, 30, 21, 12], fn));
-
-
+let reduce = (nums, fn, init)=>{
+    let value = init
+    for (let i = 0; i < nums.length; i++) {
+       value = fn(value, nums[i])        
+    }
+    return value
+}
+  console.log(reduce([2, 12, 3, 1], fn, 0));
   
