@@ -282,29 +282,48 @@
 
 //-------------- 12
 
-class Counter{
-    constructor(init){
-        this.init = init;
-        this.count = init
-    }
-    increment(){
-        this.count+=1;
-        return this.count
-    }
-    decrement(){
-        this.count-=1
-        return this.count
-}
-reset(){
-    this.count = this.init
-    return this.count
-}
-}
-var createCounter = function(init){
-    return new Counter(init)
-}
+// class Counter{
+//     constructor(init){
+//         this.init = init;
+//         this.count = init
+//     }
+//     increment(){
+//         this.count+=1;
+//         return this.count
+//     }
+//     decrement(){
+//         this.count-=1
+//         return this.count
+// }
+// reset(){
+//     this.count = this.init
+//     return this.count
+// }
+// }
+// var createCounter = function(init){
+//     return new Counter(init)
+// }
 
-const result = createCounter(5)
-console.log(result);
+// const result = createCounter(5)
+// console.log(result);
+
+//============= 13
+function fn (m){
+    if(m){
+        return m
+    }
+}
+let filter = (arr, fn) => {
+    let sort = []
+    for (let i = 0; i < arr.length; i++) {
+     if(fn(arr[i], i)){
+        sort.push(arr[i])
+     }
+        
+    }
+    return sort
+}
+console.log(filter([20, 30, 21, 12], fn));
+
 
   
