@@ -251,3 +251,12 @@
 // }
 // let curriedSum = curry(sum)
 // console.log(curriedSum(1)(2)); // 3
+
+//====== for real projects
+
+function log(date, importance, message){
+  console.log(`[${date.getHours()}:${date.getMinutes()}][${importance}] ${message}`);
+}
+log(new Date(), 'debug', 'someDebug');
+
+//------^^^^^^^^^^^^
