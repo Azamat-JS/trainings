@@ -111,26 +111,26 @@
 // console.log(myObj);
 //------------------------- class expression -----
 
-class User {
-  constructor(name) {
-    this.name = name;
-  }
-  get name() {
-    return this._name;
-  }
-  set name(value) {
-    if (value.length < 4) {
-      console.log("name is too short");
-      return;
-    }
-    this._name = value;
-  }
-}
-// let user = new User("John")
-// console.log(user); // John
+// class User {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   get name() {
+//     return this._name;
+//   }
+//   set name(value) {
+//     if (value.length < 4) {
+//       console.log("name is too short");
+//       return;
+//     }
+//     this._name = value;
+//   }
+// }
+// // let user = new User("John")
+// // console.log(user); // John
 
-let user = new User("Ali");
-console.log(user);
+// let user = new User("Ali");
+// console.log(user);
 
 //-------------- Computed names [...]  ---------
 
@@ -140,3 +140,14 @@ console.log(user);
 //   }
 // }
 // new Register().sayBey()
+
+//------------ class fields ---------
+
+// class Name {
+//     name = "Jasur";
+//     sayHu(){
+//         console.log(`hey, ${this.name}`);
+        
+//     }
+// }
+// new Name().sayHu()
