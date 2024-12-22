@@ -26,7 +26,7 @@
 //        if(key === "name"){
 //         return this[key]
 //        }
-            
+
 //         }
 //     }
 // let obj = {
@@ -86,7 +86,7 @@
 //     this.model = model
 //     this.showModel = function(){
 //   console.log(`"Model is ${this.model}"`);
-  
+
 //     }
 // }
 // Phone.prototype.showBrand = function(brand){
@@ -112,24 +112,31 @@
 //------------------------- class expression -----
 
 class User {
-    constructor(name){
-    this.name = name
-}
-get name(){
-return this._name
-}
-set name(value){
-    if(value.length < 4){
-        console.log("name is too short");
-        return
+  constructor(name) {
+    this.name = name;
+  }
+  get name() {
+    return this._name;
+  }
+  set name(value) {
+    if (value.length < 4) {
+      console.log("name is too short");
+      return;
     }
-    this._name = value
-}
+    this._name = value;
+  }
 }
 // let user = new User("John")
 // console.log(user); // John
 
-let user = new User("Ali")
+let user = new User("Ali");
 console.log(user);
 
+//-------------- Computed names [...]  ---------
 
+// class Register {
+//   ["say" + "Bey"]() {
+//     console.log("salom");
+//   }
+// }
+// new Register().sayBey()
