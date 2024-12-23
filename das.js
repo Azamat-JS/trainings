@@ -429,3 +429,22 @@ script()*/
 //     return res[res.length - 2]
 // }
 // console.log(secondLargest([4, 6, 78, 90]));
+
+//-------- nested function ------------
+
+// function makeCounter(){
+//     let count = 0
+
+//     return function(){
+//         return count++
+//     }
+// }
+
+// let counter = makeCounter()
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+
+
