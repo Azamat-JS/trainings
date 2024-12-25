@@ -446,5 +446,19 @@ script()*/
 // console.log(counter());
 // console.log(counter());
 
+//---------------- function class
+
+// let sum = new Function('a', 'b', 'return a + b')
+// console.log(sum(3, 6)); // 9
+
+//-------------^^^^
+
+// let sayGo = new Function('console.log("Go!")')
+// sayGo()
+
+
+
+
+  
 
 
