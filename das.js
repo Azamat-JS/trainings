@@ -456,9 +456,27 @@ script()*/
 // let sayGo = new Function('console.log("Go!")')
 // sayGo()
 
+//^^^^^^^^^^^^^^
 
+// function getFunc(){
+//     let value = 'test'
+//     let func = function(){console.log(value)}
+//     return func
+// }
+// getFunc()()
 
+//   ^^^^^^^^^^^^^^^^^^
 
-  
+// types of syntax
+
+// let sum1 = new Function('a', 'b', 'return a + b')
+// console.log(sum1(4, 9));
+
+// let multiply2 = new Function('a,b', 'return a * b')
+// console.log(multiply2(4, 8));
+
+// let substraction = new Function('a , b', 'return a - b')
+// console.log(substraction(19, 8));
+
 
 
