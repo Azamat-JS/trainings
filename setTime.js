@@ -107,3 +107,16 @@
 //     let timerOd = setInterval(go, 1000)
 // }
 // printNumbers(2, 7)
+
+// --------------------function with setTimeout
+
+// let user = {
+//     firsname: "John",
+//     sayHi(){
+//         console.log(`Salom, ${this.firsname}!`);
+        
+//     }
+// }
+// setTimeout(function() {
+//     user.sayHi()
+// }, 1000)
