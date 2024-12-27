@@ -120,3 +120,18 @@
 // setTimeout(function() {
 //     user.sayHi()
 // }, 1000)
+
+//^^^^^^^^^^^^^^^^^^^^^
+
+let user = {
+    firstname: "John",
+    sayHi(){
+        console.log(`Salom, ${this.firstname}!`)
+    }
+}
+setTimeout(() => { user.sayHi()}, 1000);
+
+user = {
+    sayHi() {console.log("Another user in setTimeout!");
+    }
+}
