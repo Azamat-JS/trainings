@@ -123,15 +123,31 @@
 
 //^^^^^^^^^^^^^^^^^^^^^
 
-let user = {
-    firstname: "John",
-    sayHi(){
-        console.log(`Salom, ${this.firstname}!`)
-    }
-}
-setTimeout(() => { user.sayHi()}, 1000);
+// let user = {
+//     firstname: "John",
+//     sayHi(){
+//         console.log(`Salom, ${this.firstname}!`)
+//     }
+// }
+// setTimeout(() => { user.sayHi()}, 1000);
 
-user = {
-    sayHi() {console.log("Another user in setTimeout!");
-    }
-}
+// user = {
+//     sayHi() {console.log("Another user in setTimeout!");
+//     }
+// }
+
+
+//^^^^^^^^^^^^^^?_------- func.bind
+
+// let user = {
+//     firstName: "John",
+// }
+
+// function func(phrase){
+//     console.log(phrase + ', ' + this.firstName);
+    
+// }
+
+// let funcUser = func.bind(user)
+
+// funcUser("salom")
