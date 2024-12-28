@@ -172,3 +172,16 @@
 //     sayHi() {console.log("another user in setTimeout");
 //     }
 // }
+
+//------------------
+let user = {
+    firstname: "John",
+    say(phrase){
+        console.log(`${phrase}, ${this.firstname}!`);
+    }
+}
+
+let say = user.say.bind(user)
+
+say("salom")
+say("xayr")
