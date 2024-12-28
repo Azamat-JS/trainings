@@ -151,3 +151,24 @@
 // let funcUser = func.bind(user)
 
 // funcUser("salom")
+
+
+//------------------
+
+// let user = {
+//     firstname: "John",
+//     sayHi(){
+//         console.log(`Salom, ${this.firstname}!`);
+        
+//     }
+// }
+// let sayHi = user.sayHi.bind(user)
+
+// sayHi()
+
+// setTimeout(sayHi, 1000)
+
+// uesr = {
+//     sayHi() {console.log("another user in setTimeout");
+//     }
+// }
