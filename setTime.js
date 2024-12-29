@@ -173,15 +173,34 @@
 //     }
 // }
 
-//------------------
-let user = {
-    firstname: "John",
-    say(phrase){
-        console.log(`${phrase}, ${this.firstname}!`);
+//------------------ function bind
+// let user = {
+//     firstname: "John",
+//     say(phrase){
+//         console.log(`${phrase}, ${this.firstname}!`);
+//     }
+// }
+
+// let say = user.say.bind(user)
+
+// say("salom")
+// say("xayr")
+
+//^^^^^^^^^^^^^^^^-------------
+
+function partial(func, ...argsBound){
+    return function(...args){
+        return func.call(this, ...argsBound, ...args)
     }
 }
 
-let say = user.say.bind(user)
+let user = {
+    firstname: "John",
+say(time , phrase){
+    console.log(`[${time}] ${this.firstname}: ${phrase}`);
+    
+}
+}
 
-say("salom")
-say("xayr")
+user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes())
+user.sayNow('salom')
