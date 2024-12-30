@@ -188,19 +188,30 @@
 
 //^^^^^^^^^^^^^^^^-------------
 
-function partial(func, ...argsBound){
-    return function(...args){
-        return func.call(this, ...argsBound, ...args)
-    }
-}
+// function partial(func, ...argsBound){
+//     return function(...args){
+//         return func.call(this, ...argsBound, ...args)
+//     }
+// }
 
-let user = {
-    firstname: "John",
-say(time , phrase){
-    console.log(`[${time}] ${this.firstname}: ${phrase}`);
+// let user = {
+//     firstname: "John",
+// say(time , phrase){
+//     console.log(`[${time}] ${this.firstname}: ${phrase}`);
     
-}
-}
+// }
+// }
 
-user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes())
-user.sayNow('salom')
+// user.sayNow = partial(user.say, new Date().getHours() + ':' + new Date().getMinutes())
+// user.sayNow('salom')
+
+//----------------------
+
+function mul(a, b){
+    return a*b
+}
+let double = mul.bind(null, 2)
+
+console.log(double(3));
+console.log(double(4));
+console.log(double(13));
