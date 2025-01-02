@@ -21,8 +21,21 @@
 
 //------ 5 find decimal numbers
 
-let regex = /-?\d+(\.\d+)?/g
-let str = "-1.5 0 2 -123.4."
-console.log(str.match(regex)); // [ '-1.5', '0', '2', '-123.4' ]
+// let regex = /-?\d+(\.\d+)?/g
+// let str = "-1.5 0 2 -123.4."
+// console.log(str.match(regex)); // [ '-1.5', '0', '2', '-123.4' ]
 
+// --------- parse expression
 
+// function parse(expr) {
+//     let regexp = /(-?\d+(?:\.\d+)?)\s*([-+*\/])\s*(-?\d+(?:\.\d+)?)/;
+  
+//     let result = expr.match(regexp);
+  
+//     if (!result) return [];
+//     result.shift();
+  
+//     return result;
+//   }
+  
+//   console.log( parse("-1.23 * 3.45") );  // -1.23, *, 3.45
