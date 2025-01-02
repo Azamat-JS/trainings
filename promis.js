@@ -18,3 +18,26 @@ let promise = new Promise(function(resolve, reject) {
 
 //------------- //////// ///////////////
 
+// let promise1 = new Promise((resolve, reject) => {
+//     resolve(123)
+// })
+// promise1.then((res) => console.log(res))
+
+//---------------------
+
+async function delay(time) {
+    return new Promise((resolve) =>{
+        setTimeout(() => {
+            resolve()
+        }, time)
+    })
+}
+async function done() {
+    console.log('first');
+    await delay(1000)
+    console.log('second');
+    await delay(2000) 
+    console.log('third');
+    
+}
+done()
