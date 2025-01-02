@@ -42,5 +42,14 @@
 
 // ---------- find only time
 
-console.log("Breakfast at 09:00 in the room 123:456.".match(/\b\d\d:\d\d\b/)); //09:00
+// console.log("Breakfast at 09:00 in the room 123:456.".match(/\b\d\d:\d\d\b/)); //09:00
 
+//--------------- find positive numbers exclude components=------------
+
+// let regex = /(?<!-)\d+/g
+// let str = "0 12 -5 123 -18"
+// console.log(str.match(regex));//[ '0', '12', '123', '8' ]
+//------------- find positive as a whole
+// let regexp = /(?<![-\d])\d+/g
+// let str = "0 12 -5 123 -18"
+// console.log(str.match(regexp));//[ '0', '12', '123' ]
