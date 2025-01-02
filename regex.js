@@ -18,3 +18,11 @@
 // console.log(str.match(regex)); // [9,9,8,9,1,0,9,2,8,3,5,3]
 
 // console.log(str.match(regex).join(""));
+
+//------ 5 find decimal numbers
+
+let regex = /-?\d+(\.\d+)?/g
+let str = "-1.5 0 2 -123.4."
+console.log(str.match(regex)); // [ '-1.5', '0', '2', '-123.4' ]
+
+
