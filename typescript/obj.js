@@ -1,17 +1,16 @@
 ///------------ Type Interface =------------------
 // type Book = { id: number; name: string; price: number };
-var deepWork = {
-    isbn: 1243,
-    title: 'deep work',
-    author: 'cal newport',
-    genre: 'self-help',
-    printAuthor: function () {
-        console.log("".concat(this.author, " wrote this book"));
-    },
-    printTitle: function (value) {
-        return "".concat(this.title, " ").concat(value);
+var computer = {
+    id: 12,
+    brand: 'HP',
+    ram: 32,
+    storage: 128,
+    price: 123,
+    upgradeRam: function (value) {
+        return this.ram = value;
     }
 };
-// deepWork.author = 'kevin'
-deepWork.printAuthor();
-console.log(deepWork.printTitle("is amazing"));
+console.log(computer);
+computer.storage = 256;
+computer.upgradeRam(64);
+console.log(computer);

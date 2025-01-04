@@ -52,28 +52,77 @@
 // console.log(tiger.age);
 
 //--------------- interface type
-interface Book {
-    readonly isbn: number;
-    title:string,
-   readonly author:string,
-    genre?:string
-    //method
-    printAuthor():void;
-    printTitle(message:string):string
+// interface Book {
+//     readonly isbn: number;
+//     title:string,
+//    readonly author:string,
+//     genre?:string
+//     //method
+//     printAuthor():void;
+//     printTitle(message:string):string
+//     printSomething:(someValue:number) => number
+// }
+
+// const deepWork: Book = {
+//     isbn:1243,
+//     title: 'deep work',
+//     author: 'cal newport',
+//     genre: 'self-help',
+    // printAuthor(){
+    //     console.log(`${this.author} wrote this book`);   
+    // },
+    // printTitle(value){
+    //     return `${this.title} ${value}`
+    // },
+    // first option
+    // printSomething:function(someValue){
+    //     return someValue
+    // },
+   // second option
+//    printSomething:(someValue)=>{
+//     console.log(deepWork.author);
+    
+//     return someValue
+//    },
+   // third option
+//    printSomething(someValue){
+//     return someValue
+//    }
+// printAuthor:()=>{
+// console.log(deepWork.author);
+
+// }
+// }
+
+
+// deepWork.author = 'kevin'
+// deepWork.printAuthor()
+// console.log(deepWork.printTitle("is amazing"));
+// console.log(deepWork.printSomething(123));
+
+//-------------- task
+
+interface Computer {
+    readonly id:number,
+    brand:string,
+    ram:number,
+    storage?:number,
+    upgradeRam(value:number):number
 }
 
-const deepWork: Book = {
-    isbn:1243,
-    title: 'deep work',
-    author: 'cal newport',
-    genre: 'self-help',
-    printAuthor(){
-        console.log(`${this.author} wrote this book`);   
-    },
-    printTitle(value){
-        return `${this.title} ${value}`
+
+const computer: Computer&{price:number} ={
+    id:12,
+    brand:'HP',
+    ram:32,
+    storage:128,
+    price: 123,
+    upgradeRam(value){
+        return this.ram = value
     }
 }
-// deepWork.author = 'kevin'
-deepWork.printAuthor()
-console.log(deepWork.printTitle("is amazing"));
+console.log(computer);
+computer.storage = 256
+computer.upgradeRam(64)
+console.log(computer);
+
