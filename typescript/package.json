@@ -1,9 +1,9 @@
 {
   "name": "typescript",
   "version": "1.0.0",
-  "main": "type.ts",
+  "main": "func.ts",
   "scripts": {
-    "dev": "node type.ts"
+    "dev": "node func.ts"
   },
   "keywords": [],
   "author": "",
