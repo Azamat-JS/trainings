@@ -3,10 +3,17 @@
 // }
 // let priceAfterDiscount = calculatePrice(80, 20);
 // console.log(priceAfterDiscount);
-var theme;
-theme = 'light';
-function setTheme(t) {
-    theme = t;
-    return theme;
+function printStaffDetails(staff) {
+    if ('employees' in staff) {
+        console.log("".concat(staff.id, " - employee is ").concat(staff.name, " working with ").concat(staff.employees[0].name));
+    }
+    else {
+        console.log("".concat(staff.name, " belongs to ").concat(staff.department, " department"));
+    }
 }
-console.log(setTheme('dark'));
+var alice = { id: 1, name: 'alice', department: 'sales' };
+var kevin = { id: 2, name: 'kevin', department: 'management' };
+var kate = { id: 2, name: 'kate', employees: [alice, kevin] };
+printStaffDetails(alice);
+printStaffDetails(kevin);
+printStaffDetails(kate);

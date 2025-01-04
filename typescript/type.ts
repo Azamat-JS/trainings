@@ -123,19 +123,23 @@
 // console.log(setTheme('dark'));
 
 
-type Employee = {id:number, name:string, department:string}
-type Manager = {id:number, name:string, employees:Employee[]}
+// type Employee = {id:number, name:string, department:string}
+// type Manager = {id:number, name:string, employees:Employee[]}
+// type Staff = Employee | Manager
 
-type Staff = Employee | Manager
+// function printStaffDetails(staff:Staff){
+//     if('employees' in staff){
+//         console.log(`${staff.id} - employee is ${staff.name} working with ${staff.employees[0].name}`);
+//     }
+//     else{
+//         console.log(`${staff.name} belongs to ${staff.department} department`);
+        
+//     }
+// }
 
-function printStaffDetails(staff:Staff):void{
-  
-}
-
-const alice:Employee = {id:1, name:'alice', department:'Sales'}
-const steve:Employee = {id:1, name:'steve', department:'Sales'}
-
-const bob:Manager = {id:1, name:'bobo', employees:[alice, steve]}
-
-
-
+// const alice:Employee = {id:1, name:'alice', department:'sales'}
+// const kevin:Employee = {id:2, name:'kevin', department:'management'}
+// const kate:Manager = {id:2, name:'kate', employees:[alice, kevin]}
+// printStaffDetails(alice)
+// printStaffDetails(kevin)
+// printStaffDetails(kate)
