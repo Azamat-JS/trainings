@@ -102,27 +102,140 @@
 
 //-------------- task
 
-interface Computer {
-    readonly id:number,
-    brand:string,
-    ram:number,
-    storage?:number,
-    upgradeRam(value:number):number
-}
+// interface Computer {
+//     readonly id:number,
+//     brand:string,
+//     ram:number,
+//     storage?:number,
+//     upgradeRam(value:number):number
+// }
 
 
-const computer: Computer&{price:number} ={
-    id:12,
-    brand:'HP',
-    ram:32,
-    storage:128,
-    price: 123,
-    upgradeRam(value){
-        return this.ram = value
+// const computer: Computer&{price:number} ={
+//     id:12,
+//     brand:'HP',
+//     ram:32,
+//     storage:128,
+//     price: 123,
+//     upgradeRam(value){
+//         return this.ram = value
+//     }
+// }
+// console.log(computer);
+// computer.storage = 256
+// computer.upgradeRam(64)
+// console.log(computer);
+
+/// ---------- interface type examples
+
+// interface Person {
+//     name:string,
+//     getDetails():string
+// }
+
+// interface CatOwner {
+//     catName:string,
+//     getCatDetails():string
+// }
+
+// interface Person {
+//     age:number
+// }
+
+// const person:Person = {
+//     name:'john',
+//     age:30,
+//     getDetails() {
+//         return `Name ${this.name}, Age: ${this.age}`
+//     },
+// }
+
+// interface Employee extends Person{
+//     employeeId: number
+// }
+// const employee:Employee = {
+//     name: 'jasur',
+//     age:28,
+//     employeeId:123,
+//     getDetails(){
+//     return `name ${this.name}, age: ${this.age}, id: ${this.employeeId}`
+//     }
+// }
+
+// interface Manager extends Person, CatOwner {
+//     managePeople():void
+// }
+
+// const manager: Manager = {
+//     name:'bob',
+//     age:34,
+//     catName: 'olivia',
+//     getDetails(){
+//         return `name ${this.name}, age: ${this.age}`
+//         },
+//     getCatDetails(){
+//         return `name ${this.catName}`
+//         },
+//         managePeople(){
+//             console.log("Managing people...");
+            
+//         }
+// }
+
+//     console.log(person.getDetails());
+//     console.log(employee.getDetails());
+//     manager.managePeople()
+
+//-------------- task
+
+function getEmployee(){
+    const random = Math.random()
+    if(random < 0.33){
+        return {
+            name:'john'
+        }
+    }else if(random < 0.66){
+        return {
+            name:'sarvar',
+            dogName:'bobik'
+        }
+    }else{
+        return{
+            name:'bob',
+            managePeople(){
+                console.log('managing people...');
+                
+            },
+            delegateTasks(){
+                console.log('delegating tasks');
+                
+            }
+        }
     }
 }
-console.log(computer);
-computer.storage = 256
-computer.upgradeRam(64)
-console.log(computer);
+interface Person {
+    name:string
+}
 
+interface DogOwner extends Person{
+    dogName:string
+}
+
+interface Manager extends Person{
+    managePeople():void;
+    delegateTasks():void
+}
+
+const employee: Person | DogOwner | Manager = getEmployee()
+console.log(employee.name);
+
+// function isManager (obj:Person | DogOwner | Manager):boolean{
+//     return 'managePeople' in obj
+// }
+function isManager (obj:Person | DogOwner | Manager):obj is Manager{
+    return 'managePeople' in obj
+}
+if(isManager(employee)){
+    employee.delegateTasks()
+}
+console.log(isManager(employee));
