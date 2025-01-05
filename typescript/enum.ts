@@ -182,18 +182,18 @@
 // console.log(getColorName(Color.Green));
 //----------------------------
 
-export function sayHi(name:string):void{
-    console.log(`hi ${name}`)
-}
-export let person = 'sarvar'
+// export function sayHi(name:string):void{
+//     console.log(`hi ${name}`)
+// }
+// export let person = 'sarvar'
 
-export type Student ={
-    name:string,
-    age:number
-}
+// export type Student ={
+//     name:string,
+//     age:number
+// }
 
-const newStudent: Student = {
-    name:'peter',
-    age: 34
-}
-export default newStudent
+// const newStudent: Student = {
+//     name:'peter',
+//     age: 34
+// }
+// export default newStudent
