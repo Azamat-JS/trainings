@@ -143,3 +143,18 @@
 // printStaffDetails(alice)
 // printStaffDetails(kevin)
 // printStaffDetails(kate)
+//----------------
+// import newStudent from "./enum";
+
+// import { person,  sayHi, Student } from "./enum";
+
+// sayHi('Jasur')
+// console.log(person);
+// console.log(newStudent);
+
+// const anotherStudent:Student = {
+//     name:'bob',
+// age: 12
+// }
+// console.log(anotherStudent);
+

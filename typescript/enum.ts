@@ -77,35 +77,123 @@
 // const result = createUser(user);
 // console.log(result);
 //----------------------------------- type assertion
-let someValue:any = 'this is a string'
-let strLenght:number = (someValue as string).length
+// let someValue:any = 'this is a string'
+// let strLenght:number = (someValue as string).length
 
-type Bird = {
+// type Bird = {
+//     name:string,
+// }
+
+// let birdString = '{"name": "Eagle"}'
+// let dogString = '{"breed":"Poodle"}'
+
+// let birdObject = JSON.parse(birdString)
+// let dogObject = JSON.parse(dogString)
+
+// let bird = birdObject as Bird
+// let dog = dogObject as Bird
+
+// console.log(bird.name);
+// console.log(dog.name);
+
+// enum Status{
+//     Pending = 'pending',
+//     Declined = 'declined'
+// }
+
+// type User = {
+//     name:string,
+//     status:Status
+// }
+
+// const statusValue = 'pending'
+// const user:User = {name:'john', status:statusValue as Status}
+
+// -------------------- type unknown -----------
+// let unknownValue:unknown
+
+// unknownValue = 'salom dunyo'
+// unknownValue = [1, 4, 12]
+// unknownValue = 12.234523
+
+// if(typeof unknownValue === 'number'){
+//     unknownValue.toFixed(2)
+// }
+
+// function runSomeCode(){
+//     const random = Math.random()
+//     if(random < 0.5){
+// throw new Error("there was an error")
+//     }else{
+// throw 'some error'
+//     }
+// }
+
+// try {
+//   runSomeCode()
+// } catch (error) {
+//     if(error instanceof Error){
+//         console.log(error.message);       
+//     }else{
+//         console.log(error);
+        
+//     }
+// }
+
+//----------------- type NEVER ---------------
+
+// let someValue:never = 0
+
+// type Theme = 'light' | 'dark'
+
+// function checkTheme(theme:Theme):void{
+// if(theme === 'light'){
+//     console.log('light theme');
+//     return
+// }
+// if(theme === 'dark'){
+//     console.log('dark theme');
+//   return 
+// }
+// theme; // type never
+// }
+
+// enum Color {
+//     Red,
+//     Blue,
+//     Green
+// }
+
+// function getColorName(color:Color){
+//     switch(color){
+//         case Color.Red:
+//             return 'Red'
+//             case Color.Blue:
+//                 return 'Blue'
+//                 case Color.Green:
+//                 return "Green"
+//                 default:
+//                     let unexpectedColor:never = color
+//                     throw new Error('Unexpexted color value :' + color)
+//     }
+// }
+// console.log(getColorName(Color.Blue));
+// console.log(getColorName(Color.Red));
+// console.log(getColorName(Color.Green));
+//----------------------------
+
+export function sayHi(name:string):void{
+    console.log(`hi ${name}`)
+}
+export let person = 'sarvar'
+
+export type Student ={
     name:string,
+    age:number
 }
 
-let birdString = '{"name": "Eagle"}'
-let dogString = '{"breed":"Poodle"}'
-
-let birdObject = JSON.parse(birdString)
-let dogObject = JSON.parse(dogString)
-
-let bird = birdObject as Bird
-let dog = dogObject as Bird
-
-console.log(bird.name);
-console.log(dog.name);
-
-enum Status{
-    Pending = 'pending',
-    Declined = 'declined'
+const newStudent: Student = {
+    name:'peter',
+    age: 34
 }
-
-type User = {
-    name:string,
-    status:Status
-}
-
-const statusValue = 'pending'
-const user:User = {name:'john', status:statusValue as Status}
-
+export default newStudent

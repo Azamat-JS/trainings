@@ -1,5 +1,9 @@
+"use strict";
 // ---------- tuples
 // let person:[string, number] = ['john', 25]
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.person = void 0;
+exports.sayHi = sayHi;
 // let date:[number, number, number] = [5, 1, 2025]
 // function getInfo():[number, boolean]{
 //     return [12, false]
@@ -60,14 +64,97 @@
 // }
 // const result = createUser(user);
 // console.log(result);
-//-----------------------------------
-var someValue = 'this is a string';
-var strLenght = someValue.length;
-var birdString = '{"name": "Eagle"}';
-var dogString = '{"breed":"Poodle"}';
-var birdObject = JSON.parse(birdString);
-var dogObject = JSON.parse(dogString);
+//----------------------------------- type assertion
+// let someValue:any = 'this is a string'
+// let strLenght:number = (someValue as string).length
+// type Bird = {
+//     name:string,
+// }
+// let birdString = '{"name": "Eagle"}'
+// let dogString = '{"breed":"Poodle"}'
+// let birdObject = JSON.parse(birdString)
+// let dogObject = JSON.parse(dogString)
 // let bird = birdObject as Bird
-var dog = dogObject;
+// let dog = dogObject as Bird
 // console.log(bird.name);
-console.log(dog.name);
+// console.log(dog.name);
+// enum Status{
+//     Pending = 'pending',
+//     Declined = 'declined'
+// }
+// type User = {
+//     name:string,
+//     status:Status
+// }
+// const statusValue = 'pending'
+// const user:User = {name:'john', status:statusValue as Status}
+// -------------------- type unknown -----------
+// let unknownValue:unknown
+// unknownValue = 'salom dunyo'
+// unknownValue = [1, 4, 12]
+// unknownValue = 12.234523
+// if(typeof unknownValue === 'number'){
+//     unknownValue.toFixed(2)
+// }
+// function runSomeCode(){
+//     const random = Math.random()
+//     if(random < 0.5){
+// throw new Error("there was an error")
+//     }else{
+// throw 'some error'
+//     }
+// }
+// try {
+//   runSomeCode()
+// } catch (error) {
+//     if(error instanceof Error){
+//         console.log(error.message);       
+//     }else{
+//         console.log(error);
+//     }
+// }
+//----------------- type NEVER ---------------
+// let someValue:never = 0
+// type Theme = 'light' | 'dark'
+// function checkTheme(theme:Theme):void{
+// if(theme === 'light'){
+//     console.log('light theme');
+//     return
+// }
+// if(theme === 'dark'){
+//     console.log('dark theme');
+//   return 
+// }
+// theme; // type never
+// }
+// enum Color {
+//     Red,
+//     Blue,
+//     Green
+// }
+// function getColorName(color:Color){
+//     switch(color){
+//         case Color.Red:
+//             return 'Red'
+//             case Color.Blue:
+//                 return 'Blue'
+//                 case Color.Green:
+//                 return "Green"
+//                 default:
+//                     let unexpectedColor:never = color
+//                     throw new Error('Unexpexted color value :' + color)
+//     }
+// }
+// console.log(getColorName(Color.Blue));
+// console.log(getColorName(Color.Red));
+// console.log(getColorName(Color.Green));
+//----------------------------
+function sayHi(name) {
+    console.log("hi ".concat(name));
+}
+exports.person = 'sarvar';
+var newStudent = {
+    name: 'peter',
+    age: 34
+};
+exports.default = newStudent;

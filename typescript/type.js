@@ -4,6 +4,7 @@
 // }
 // let priceAfterDiscount = calculatePrice(80, 20);
 // console.log(priceAfterDiscount);
+Object.defineProperty(exports, "__esModule", { value: true });
 // -----------------
 // function calculateScore(
 //   initialScore: number,
@@ -114,3 +115,14 @@
 // printStaffDetails(alice)
 // printStaffDetails(kevin)
 // printStaffDetails(kate)
+//----------------
+var enum_1 = require("./enum");
+var enum_2 = require("./enum");
+(0, enum_2.sayHi)('Jasur');
+console.log(enum_2.person);
+console.log(enum_1.default);
+var anotherStudent = {
+    name: 'bob',
+    age: 12
+};
+console.log(anotherStudent);
