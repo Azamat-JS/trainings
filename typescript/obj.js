@@ -1,4 +1,5 @@
-///------------ Type Interface =------------------
+"use strict";
+///------------ Type alias =------------------
 // type Book = { id: number; name: string; price: number };
 // const book1: Book = {
 //   id: 1,
@@ -16,7 +17,7 @@
 //   price: 25,
 //   discount: 0.15,
 // };
-//-------------------- different method ^^^^^^^
+//-------------------- type alias different method ^^^^^^^
 // type Book = { id: number; name: string; price: number };
 // type DiscountedBook = Book & {discount:number}
 // const book1: Book = {
@@ -159,7 +160,7 @@
 //     manager.managePeople()
 //-------------- task
 function getEmployee() {
-    var random = Math.random();
+    const random = Math.random();
     if (random < 0.33) {
         return {
             name: 'john'
@@ -174,16 +175,16 @@ function getEmployee() {
     else {
         return {
             name: 'bob',
-            managePeople: function () {
+            managePeople() {
                 console.log('managing people...');
             },
-            delegateTasks: function () {
-                console.log('deleting tasks');
+            delegateTasks() {
+                console.log('delegating tasks');
             }
         };
     }
 }
-var employee = getEmployee();
+const employee = getEmployee();
 console.log(employee.name);
 // function isManager (obj:Person | DogOwner | Manager):boolean{
 //     return 'managePeople' in obj

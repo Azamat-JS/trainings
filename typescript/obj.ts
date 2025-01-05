@@ -1,4 +1,4 @@
-///------------ Type Interface =------------------
+///------------ Type alias =------------------
 // type Book = { id: number; name: string; price: number };
 
 // const book1: Book = {
@@ -20,7 +20,7 @@
 //   discount: 0.15,
 // };
 
-//-------------------- different method ^^^^^^^
+//-------------------- type alias different method ^^^^^^^
 // type Book = { id: number; name: string; price: number };
 // type DiscountedBook = Book & {discount:number}
 

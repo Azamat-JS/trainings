@@ -1,9 +1,9 @@
 {
   "name": "typescript",
   "version": "1.0.0",
-  "main": "func.ts",
+  "main": "enum.ts",
   "scripts": {
-    "dev": "node func.ts"
+    "dev": "node enum.ts"
   },
   "keywords": [],
   "author": "",
