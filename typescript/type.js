@@ -3,18 +3,17 @@
 // }
 // let priceAfterDiscount = calculatePrice(80, 20);
 // console.log(priceAfterDiscount);
-var value;
-var random = Math.random();
-value = random < 0.33 ? 'salom' : random < 0.66 ? 123.456 : true;
-function checkValue(value) {
-    if (typeof value === 'string') {
-        console.log(value.toLocaleLowerCase());
-        return;
-    }
-    if (typeof value === 'number') {
-        console.log(value.toFixed());
-        return;
-    }
-    console.log("boolean: ".concat(value));
+var car = { brand: 'ford', model: 'mustang' };
+var product = { name: 'shoes', price: 120 };
+var pupil = { name: "Ali", age: 23 };
+// function printName<T extends Student>(input:T):void{
+//     console.log(input.name); 
+// }
+// function printName<T extends Student | Product>(input:T):void{
+//     console.log(input.name); 
+// }
+function printName(input) {
+    console.log(input.name);
 }
-checkValue(value);
+printName(pupil);
+printName(product);

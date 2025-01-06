@@ -197,3 +197,43 @@
 //     age: 34
 // }
 // export default newStudent
+
+//------------------- fetch data -----------
+const url = 'https://reqres.in/api/users?page=2';
+
+type ApiResponse = {
+    page: number;
+    per_page: number;
+    total: number;
+    total_pages: number;
+    data: Array<{ id: number; email: string; first_name: string; last_name: string; avatar: string }>;
+};
+
+async function fetchData(url: string): Promise<ApiResponse['data']> {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('http error! status:' + response.status);
+        }
+        const data: ApiResponse = await response.json();
+        return data.data; // Return only the "data" array from the response
+    } catch (error) {
+        const errMsg = error instanceof Error ? error.message : "there was an error";
+        console.log(errMsg);
+        return [];
+    }
+}
+
+// Wrapping in an async function since top-level await is not supported in CommonJS
+(async () => {
+    const tours = await fetchData(url);
+
+    // Map through the fetched data and log names
+    tours.map((tour) => {
+        console.log(`${tour.first_name} ${tour.last_name}`);
+    });
+})();
+
+// Call the function and log the data
+// fetchData(url).then(data => console.log(data));
+
