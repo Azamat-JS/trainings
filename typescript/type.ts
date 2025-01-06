@@ -178,14 +178,14 @@
 // }
 // checkValue(value)
 //----------------- type generics-------
-// type Car = {brand: string, model:string}
-// const car:Car ={brand: 'ford', model:'mustang'}
+type Car = {brand: string, model:string}
+const car:Car ={brand: 'ford', model:'mustang'}
 
-// type Product = {name:string, price:number}
-// const product:Product = {name:'shoes', price:120}
+type Product = {name:string, price:number}
+const product:Product = {name:'shoes', price:120}
 
-// type Student = {name:string, age:number}
-// const pupil:Student= {name: "Ali", age:23}
+type Student = {name:string, age:number}
+const pupil:Student= {name: "Ali", age:23}
 
 // function printName<T extends Student>(input:T):void{
 //     console.log(input.name); 
@@ -193,11 +193,11 @@
 // function printName<T extends Student | Product>(input:T):void{
 //     console.log(input.name); 
 // }
-// function printName<T extends {name:string}>(input:T):void{
-//     console.log(input.name); 
-// }
-// printName(pupil)
-// printName(product)
+function printName<T extends {name:string}>(input:T):void{
+    console.log(input.name); 
+}
+printName(pupil)
+printName(product)
 
 //------------- default type ------------- 
 
@@ -210,3 +210,4 @@
 // const randomStuff:StoreData = {
 //     data:[12, 'log']
 // }
+

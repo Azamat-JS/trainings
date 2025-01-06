@@ -235,5 +235,5 @@ async function fetchData(url: string): Promise<ApiResponse['data']> {
 })();
 
 // Call the function and log the data
-// fetchData(url).then(data => console.log(data));
+fetchData(url).then(data => console.log(data));
 

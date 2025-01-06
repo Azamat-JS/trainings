@@ -17,3 +17,13 @@ function printName(input) {
 }
 printName(pupil);
 printName(product);
+//------------- default type ------------- 
+// interface StoreData<T = any> {
+//     data: T[]
+// }
+// const storeNums:StoreData<number> = {
+//     data:[1, 2, 3, 4]
+// }
+// const randomStuff:StoreData = {
+//     data:[12, 'log']
+// }
