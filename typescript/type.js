@@ -1,8 +1,17 @@
-// function calculatePrice(price: number, discount?: number): number {
-//   return price - (discount || 0);
+// function calculatePrice(price:number, discount?:number):number{
+//     return price - (discount || 0)
 // }
-// let priceAfterDiscount = calculatePrice(80, 20);
-// console.log(priceAfterDiscount);
+// const totalPrice = calculatePrice(50, 20)
+// console.log(totalPrice);
+// -----------------
+function calculateScore(initial, penalty) {
+    if (penalty === void 0) { penalty = 0; }
+    return initial - penalty;
+}
+var afterPenalty = calculateScore(120, 50);
+var afterPen = calculateScore(120);
+console.log(afterPenalty);
+console.log(afterPen);
 var car = { brand: 'ford', model: 'mustang' };
 var product = { name: 'shoes', price: 120 };
 var pupil = { name: "Ali", age: 23 };

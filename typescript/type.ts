@@ -1,20 +1,17 @@
-// function calculatePrice(price: number, discount?: number): number {
-//   return price - (discount || 0);
+// function calculatePrice(price:number, discount?:number):number{
+//     return price - (discount || 0)
 // }
-// let priceAfterDiscount = calculatePrice(80, 20);
-// console.log(priceAfterDiscount);
-
+// const totalPrice = calculatePrice(50, 20)
+// console.log(totalPrice);
 // -----------------
 
-// function calculateScore(
-//   initialScore: number,
-//   penaltyPoints: number = 0
-// ): number {
-//   return initialScore - penaltyPoints;
+// function calculateScore(initial:number, penalty:number = 0){
+//     return initial - penalty
 // }
-// let scoreAfterPenalty = calculateScore(200, 120);
-// let scoreWithoutPenalty = calculateScore(300);
-
+// const afterPenalty = calculateScore(120, 50)
+// const afterPen = calculateScore(120)
+// console.log(afterPenalty);
+// console.log(afterPen);
 //-----------------
 // function sum(text:string, ...numbers:number[]){
 //     const doubled = numbers.map((num) => num * 2)
@@ -27,7 +24,7 @@
 
 // let result = sum('the total is: ', 3, 5, 2, 7,1)
 // console.log(result);
-
+//---------------------------------------
 // function logMessage(message:string):void{
 //     console.log(message);
 // }
@@ -178,14 +175,14 @@
 // }
 // checkValue(value)
 //----------------- type generics-------
-type Car = {brand: string, model:string}
-const car:Car ={brand: 'ford', model:'mustang'}
+// type Car = {brand: string, model:string}
+// const car:Car ={brand: 'ford', model:'mustang'}
 
-type Product = {name:string, price:number}
-const product:Product = {name:'shoes', price:120}
+// type Product = {name:string, price:number}
+// const product:Product = {name:'shoes', price:120}
 
-type Student = {name:string, age:number}
-const pupil:Student= {name: "Ali", age:23}
+// type Student = {name:string, age:number}
+// const pupil:Student= {name: "Ali", age:23}
 
 // function printName<T extends Student>(input:T):void{
 //     console.log(input.name); 
@@ -193,11 +190,11 @@ const pupil:Student= {name: "Ali", age:23}
 // function printName<T extends Student | Product>(input:T):void{
 //     console.log(input.name); 
 // }
-function printName<T extends {name:string}>(input:T):void{
-    console.log(input.name); 
-}
-printName(pupil)
-printName(product)
+// function printName<T extends {name:string}>(input:T):void{
+//     console.log(input.name); 
+// }
+// printName(pupil)
+// printName(product)
 
 //------------- default type ------------- 
 
