@@ -9,15 +9,26 @@
 //     animal.meow();
 //   }
 // }
-//------------------^^^^^^^^^^^^^^^^^
-// function makeSound(animal:Animal){
-//     if('bark' in animal){
-//         animal.bark()
-//     }
-//     else{
-//         animal.meow()
-//     }
+
+//---------------------------
+
+// type User = {id:number, name:string, joinedTime:string}
+// type Admin = {id:number, name:string, createdTime:string}
+// type People = User | Admin
+// function checkAdmin(person:People):void{
+// if('joinedTime' in person){
+//     console.log(`${person.name} is not admin`);    
+// }else{
+//     console.log(`${person.name} is admin`); 
 // }
+// }
+// const customer:Admin = {
+//     id:123,
+//     name: 'Umar',
+//   createdTime:'30.12.2024'
+// }
+// checkAdmin(customer)
+
 //---------------------- truthy and falsy ----------------
 // function printLength(str:string | null | undefined){
 //     if(str ){
@@ -54,6 +65,23 @@
 // const random = checkInput('2020-05-05')
 // console.log(year);
 // console.log(random);
+//---------------------------- check name
+// function checkName(name:string | null):string{
+//     if(name){
+//         return `${name} is available`
+//     }else{
+//         return "you should provide name properly"
+//     }
+// }
+// type Admin = {id:number, name:string, createdTime:string}
+// const customer:Admin = {
+//     id:123,
+//     name: 'Umar',
+//   createdTime:'30.12.2024'
+// }
+// const isName = checkName(customer.name)
+// console.log(isName);
+
 //------------------- type Predicate ------------
 // type Student = { name: string; study: () => void };
 
@@ -81,6 +109,7 @@
 // } else {
 //   person.login();
 // }
+
 //------------- discriminated unions and exhaustive check using the never type ==----------
 
 // type IncrementAction = {
