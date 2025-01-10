@@ -141,7 +141,7 @@
 // }
 // const newState = reducer(15, {
 //   user: "john",
-//   type:'decrement',
+//   type:'increment',
 //   amount: 6,
 //   timestamp: 1432,
 // });

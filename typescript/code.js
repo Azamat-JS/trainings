@@ -1,46 +1,24 @@
 // type Dog = { type: "dog"; name: string; bark: () => void };
 // type Cat = { type: "cat"; name: string; meow: () => void };
 // type Animal = Dog | Cat;
-var findOutResult = function () {
-    var random = Math.random();
-    return random < 0.5
-        ? { name: "john", score: parseFloat(random.toFixed(2)), result: function () { return console.log("you are applicant"); } }
-        : { name: "martin", score: parseFloat(random.toFixed(2)), getJob: function () { return console.log('you are passed the interview'); } };
-};
-var findRes = findOutResult();
-console.log(findRes);
-//------------- discriminated unions and exhaustive check using the never type ==----------
-// type IncrementAction = {
-//   type: "increment";
-//   amount: number;
-//   timestamp: number;
-//   user: string;
-// };
-// type DecrementAction = {
-//   type: "decrement";
-//   amount: number;
-//   timestamp: number;
-//   user: string;
-// };
-// type Action = IncrementAction | DecrementAction;
-// function reducer(state: number, action: Action) {
-//     switch(action.type){
-//         case 'increment':
-//         return state + action.amount
-//         case 'decrement':
-//         return state - action.amount
-//         default:
-//           const  unexpectedAction:never = action
-//             throw new Error(`Unexpected Action: ${unexpectedAction}`)
-//     }
-// }
-// const newState = reducer(15, {
-//   user: "john",
-//   type:'decrement',
-//   amount: 6,
-//   timestamp: 1432,
-// });
-// console.log(newState);
+function reducer(state, action) {
+    switch (action.type) {
+        case "increment":
+            return state + action.amount;
+        case "decrement":
+            return state - action.amount;
+        default:
+            var UnexpectedType = action;
+            throw new Error("unexpected type : ".concat(UnexpectedType));
+    }
+}
+var myState = reducer(20, {
+    user: "Halim",
+    type: "increment",
+    amount: 12,
+    timestamp: 2025
+});
+console.log(myState);
 //------------------- Generics ------------
 // let array1: string[] = ["Apple", "Banana", "Mango"];
 // let array2: number[] = [1, 2, 3];
