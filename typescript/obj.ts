@@ -239,3 +239,5 @@ if(isManager(employee)){
     employee.delegateTasks()
 }
 console.log(isManager(employee));
+
+

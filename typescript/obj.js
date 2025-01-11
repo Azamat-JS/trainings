@@ -159,40 +159,40 @@
 //     console.log(employee.getDetails());
 //     manager.managePeople()
 //-------------- task
-function getEmployee() {
-    const random = Math.random();
-    if (random < 0.33) {
-        return {
-            name: 'john'
-        };
-    }
-    else if (random < 0.66) {
-        return {
-            name: 'sarvar',
-            dogName: 'bobik'
-        };
-    }
-    else {
-        return {
-            name: 'bob',
-            managePeople() {
-                console.log('managing people...');
-            },
-            delegateTasks() {
-                console.log('delegating tasks');
-            }
-        };
-    }
-}
-const employee = getEmployee();
-console.log(employee.name);
+// function getEmployee() {
+//     const random = Math.random();
+//     if (random < 0.33) {
+//         return {
+//             name: 'john'
+//         };
+//     }
+//     else if (random < 0.66) {
+//         return {
+//             name: 'sarvar',
+//             dogName: 'bobik'
+//         };
+//     }
+//     else {
+//         return {
+//             name: 'bob',
+//             managePeople() {
+//                 console.log('managing people...');
+//             },
+//             delegateTasks() {
+//                 console.log('delegating tasks');
+//             }
+//         };
+//     }
+// }
+// const employee = getEmployee();
+// console.log(employee.name);
 // function isManager (obj:Person | DogOwner | Manager):boolean{
 //     return 'managePeople' in obj
 // }
-function isManager(obj) {
-    return 'managePeople' in obj;
-}
-if (isManager(employee)) {
-    employee.delegateTasks();
-}
-console.log(isManager(employee));
+// function isManager(obj) {
+//     return 'managePeople' in obj;
+// }
+// if (isManager(employee)) {
+//     employee.delegateTasks();
+// }
+// console.log(isManager(employee));
