@@ -14,20 +14,13 @@
 //     }
 //     console.log(myFunc([12,22, 30, 5,6,7,8,9, 3]));
 
-//----------- 2
-
-// // add 1 ------------------------------------------------
-// function tr
-
-;
-
 //-------- 3
 
 // function findPalindromes(n1, n2) {
 //     let xarr = [];
 //     let carr = [];
 //     for (let i = n1; i <= n2; i++) {
-//          if(Number(i)){
+//          if(i){
 //          let a = Number(i.toString().split("").reverse().join(""))
 //          xarr.push(a)
 //          }
