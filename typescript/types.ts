@@ -42,3 +42,16 @@
 // }
 // const result = new Person('Azamat', 28)
 // console.log(result);
+
+//-------------- generics ----------
+const gameScores = [14, 12, 21, 34, 55]
+const favoriteThings = ["books", "laptop", "watch", "smartphone"]
+const voters = [{name:'Abror', age: 45}, {name:'Bobur', age: 30}]
+
+function getLastItem<T>(array:T[]):T | undefined{
+    return array[array.length - 1]
+    
+}
+getLastItem(voters)
+getLastItem(favoriteThings)
+getLastItem(gameScores)

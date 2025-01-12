@@ -78,4 +78,5 @@ function addNewUser(newUser:Omit<User, "id">):User{
   return user
 }
 addNewUser({username: "Sarvar", role: "member"})
+addNewUser({username: "Utkir", role: "admin"})
 console.log(users);

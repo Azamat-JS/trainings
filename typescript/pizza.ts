@@ -16,13 +16,17 @@ const menu: Pizza[] = [
 
 let orderQueue: Order[] = [];
 
-function addNewPizza(pizzaObj:Pizza): void {
-  pizzaObj.id = nextPizzaId++
-  menu.push(pizzaObj)
+function addNewPizza(pizzaObj:Omit<Pizza, "id">): Pizza {
+  const newPizza:Pizza = {
+     id: nextPizzaId++,
+     ...pizzaObj
+  }
+  menu.push(newPizza)
+  return newPizza
 }
-addNewPizza({id: nextPizzaId++,name: "tomato added", price: 10 });
-addNewPizza({id: nextPizzaId++,name: "cheese and milk", price: 10 });
-addNewPizza({id: nextPizzaId++,name: "fried potato added", price: 10 });
+addNewPizza({name: "tomato added", price: 10 });
+addNewPizza({name: "cheese and milk", price: 10 });
+addNewPizza({name: "fried potato added", price: 10 });
 
 function getPizzaDetails(identifier: string | number): Pizza {
   if (typeof identifier === "number") {

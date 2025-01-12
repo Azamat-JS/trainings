@@ -18,15 +18,33 @@
 //   return `${this.title} by ${this.author}`
 // }
 //   }
-var Person = /** @class */ (function () {
-    function Person(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    Person.prototype.greet = function () {
-        console.log("salom, my name is ".concat(this.name, " and I'm ").concat(this.age, " years old"));
-    };
-    return Person;
-}());
-var result = new Person('Azamat', 28);
-console.log(result);
+// const deepwork = new Book("Deep work", "Cal Newport");
+// console.log(deepwork.info);
+// // deepwork.checkOut = true
+// console.log(deepwork);
+// console.log(deepwork.someInfo);
+// console.log(deepwork.checkOut);
+// interface IPerson{
+//   name:string;
+//   age:number;
+//   greet():void;
+// }
+// class Person implements IPerson {
+//     constructor(public name:string, public age:number){}
+//     greet():void{
+//         console.log(`salom, my name is ${this.name} and I'm ${this.age} years old`);
+//     }
+// }
+// const result = new Person('Azamat', 28)
+// console.log(result);
+//-------------- generics ----------
+var gameScores = [14, 12, 21, 34, 55];
+var favoriteThings = ["books", "laptop", "watch", "smartphone"];
+var voters = [{ name: 'Abror', age: 45 }, { name: 'Bobur', age: 30 }];
+function getLastItem(array) {
+    var lastItem = array[array.length - 1];
+    console.log(lastItem);
+}
+getLastItem(voters);
+getLastItem(favoriteThings);
+getLastItem(gameScores);
