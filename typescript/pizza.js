@@ -26,7 +26,7 @@ function addNewPizza(pizzaObj) {
     return newPizza;
 }
 addNewPizza({ name: "tomato added", price: 10 });
-addNewPizza({ name: "cheese and milk", price: 10 });
+addNewPizza({ name: "cheese and olive", price: 10 });
 addNewPizza({ name: "fried potato added", price: 10 });
 function getPizzaDetails(identifier) {
     if (typeof identifier === "number") {
@@ -46,16 +46,28 @@ function getPizzaDetails(identifier) {
         return foundPizza;
     }
 }
+function addToArray(array, item) {
+    array.push(item);
+    return array;
+}
+console.log(addToArray(menu, { id: nextOrderId++, name: "Chicken Bacon Ranch", price: 10 }));
+console.log(addToArray(orderQueue, { id: nextOrderId++, pizza: menu[2], status: 'completed' }));
 function placeOrder(pizzaName) {
     var selectedPizza = menu.find(function (pizzaObj) { return pizzaObj.name === pizzaName; });
     if (!selectedPizza) {
         console.error("".concat(pizzaName, " does not exist in the menu"));
+        return null;
     }
-    return null;
+    var order = {
+        id: selectedPizza.id,
+        pizza: selectedPizza,
+        status: "ordered"
+    };
+    return order;
 }
-placeOrder("Hawaiian");
-placeOrder("Veggie");
-placeOrder("Hawaiian");
+// console.log(placeOrder("Hawaiian"));
+// console.log(placeOrder("Veggie"));
+// console.log(placeOrder("Hawaiian"));
 placeOrder("tomato added");
 placeOrder("Pepperon");
 placeOrder("cheese and olive");
@@ -71,4 +83,4 @@ function completedOrder(orderId) {
 // const result = getPizzaDetails(3);
 // console.log(result);
 // console.log(completedOrder(4));
-console.log(menu);
+// console.log(menu);

@@ -25,7 +25,7 @@ function addNewPizza(pizzaObj:Omit<Pizza, "id">): Pizza {
   return newPizza
 }
 addNewPizza({name: "tomato added", price: 10 });
-addNewPizza({name: "cheese and milk", price: 10 });
+addNewPizza({name: "cheese and olive", price: 10 });
 addNewPizza({name: "fried potato added", price: 10 });
 
 function getPizzaDetails(identifier: string | number): Pizza {
@@ -47,17 +47,31 @@ function getPizzaDetails(identifier: string | number): Pizza {
   }
 }
 
+function addToArray<T>(array:T[], item:T): T[]{
+  array.push(item)
+  return array
+}
+console.log(addToArray<Pizza>(menu, {id:nextOrderId++, name: "Chicken Bacon Ranch", price:12}))
+console.log(addToArray<Order>(orderQueue, {id:nextOrderId++, pizza: menu[2], status: 'completed' }))
+
+
 function placeOrder(pizzaName: string):Order | null {
   const selectedPizza = menu.find((pizzaObj) => pizzaObj.name === pizzaName);
   if (!selectedPizza) {
     console.error(`${pizzaName} does not exist in the menu`);
+    return null
   }
-  return null;
+  const order: Order ={
+    id: selectedPizza.id,
+    pizza: selectedPizza,
+    status: "ordered"
+  }
+  return order
 }
-placeOrder("Hawaiian");
-placeOrder("Veggie");
-placeOrder("Hawaiian");
-placeOrder("tomato added");
+// console.log(placeOrder("Hawaiian"));
+// console.log(placeOrder("Veggie"));
+// console.log(placeOrder("Hawaiian"));
+placeOrder("tomato added")
 placeOrder("Pepperon");
 placeOrder("cheese and olive");
 
@@ -75,4 +89,6 @@ function completedOrder(orderId: number):Order | null {
 // console.log(result);
 
 // console.log(completedOrder(4));
-console.log(menu);
+// console.log(menu);
+
+
