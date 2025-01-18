@@ -53,3 +53,10 @@
 // let regexp = /(?<![-\d])\d+/g
 // let str = "0 12 -5 123 -18"
 // console.log(str.match(regexp));//[ '0', '12', '123' ]
+
+//---------------- set Password
+
+// password: {
+//     type:String,
+//     match:[/^[A-Za-z0-9]+$/, 'You must can write only numbers or letters']
+// }

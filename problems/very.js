@@ -238,5 +238,119 @@
 // console.log(spiralOrder(matrix)); // Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
 
 
-//------------------ myReduce ----------------
+// function count(arr){
+//     let obj = {}
+//     for(const item of arr){
+//         if(obj[item]){
+//             obj[item] += 1
+//         }else{
+//             obj[item] = 1
+//         }
+//     }
+//     return obj
+// }
+// console.log(count(arr));
 
+//---------------- answers of the competency test ------
+
+ // 1-masala
+ function countPalindromTimes() {
+    let countOfPalindromTimes = 0;
+  
+    for (let h = 0; h < 24; h++) {
+      for (let m = 0; m < 60; m++) {
+        // Soat va daqiqa sonlarini alohida olish
+        let hour1 = Math.floor(h / 10); // Soatning birinchi raqamini ilganman
+        let hour2 = h % 10;            // Soatning ikkinchi raqami
+        let min1 = Math.floor(m / 10); // Daqiqaning birinchi raqami
+        let min2 = m % 10;            // Daqiqaning ikkinchi raqami
+  
+        // Palindromlikni tekshiramiz
+        if (hour1 === min2 && hour2 === min1) {
+          countOfPalindromTimes++;
+        }
+      }
+    }
+  
+    return countOfPalindromTimes;
+  }
+  
+  console.log(countPalindromTimes());
+  
+  
+  // 2-masala
+  
+  function digitalRoot(n) {
+    while (n > 9) {
+      let sum = 0;
+      let temp = n;
+  
+      while (temp > 0) {
+        sum += temp % 10; // Oxirgi raqamni qo‘shamiz
+        temp = Math.floor(temp / 10); // So‘nggi raqamni olib tashlaymiz
+      }
+  
+      n = sum; // Raqamlar yig‘indisini yangi `n` deb belgilaymiz
+    }
+  
+    return n;
+  }
+  
+  console.log(digitalRoot(482)); // Output: 6
+  
+  // 3-masala
+  
+  function countOccurrences(arr) {
+    const occurrences = {}; // Natijani saqlash uchun obyekt
+  
+    for (let i = 0; i < arr.length; i++) {
+      const element = arr[i];
+      if (occurrences[element] === undefined) {
+        occurrences[element] = 1; // Agar element hali mavjud bo'lmasa, uni 1 ga teng qilamiz
+      } else {
+        occurrences[element] += 1; // Agar mavjud bo'lsa, qiymatini 1 ga oshiramiz
+      }
+    }
+  
+    return occurrences;
+  }
+  
+  console.log(countOccurrences([1, 2, 2, 3, 3, 3, 4]));
+  
+  // 4-masala
+  
+  function longestUniqueSubstring(s) {
+    let seen = {}; 
+    let maxLength = 0;
+    let longestSubstring = '';
+    let currentSubstring = '';
+    let start = 0; // Current substring boshlanish nuqtasi
+  
+    for (let i = 0; i < s.length; i++) {
+      let char = s[i];
+      // Belgini ko'rilgan bo'lsa, uni substringdan chiqaramiz
+      while (seen[char]) {
+        seen[s[start]] = false; // Boshlanishdagi belgi obyektni yangilaymiz
+        start++; // Boshlanish nuqtasini bitta siljitamiz
+      }
+      seen[char] = true; // Yangi belgi obyektga qo'shiladi
+      currentSubstring = ''; // Yangi substringni to'ldiramiz
+  
+      // Yangi substringni qo'lda to'ldirish
+      for (let j = start; j <= i; j++) {
+        currentSubstring += s[j];
+      }
+  
+      // Maksimal uzunlikni yangilash
+      if (currentSubstring.length > maxLength) {
+        maxLength = currentSubstring.length;
+        longestSubstring = currentSubstring;
+      }
+    }
+  
+    return longestSubstring;
+  }
+  
+  console.log(longestUniqueSubstring("abcabcbb"));
+  // Output: "abc"
+  
