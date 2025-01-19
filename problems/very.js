@@ -275,8 +275,7 @@
     return countOfPalindromTimes;
   }
   
-  console.log(countPalindromTimes());
-  
+  console.log(countPalindromTimes()); // Output: 16
   
   // 2-masala
   
@@ -297,6 +296,7 @@
   }
   
   console.log(digitalRoot(482)); // Output: 6
+
   
   // 3-masala
   
