@@ -295,7 +295,7 @@
     return n;
   }
   
-  console.log(digitalRoot(482)); // Output: 6
+  console.log(digitalRoot(482)); // Output: 5
 
   
   // 3-masala
@@ -351,6 +351,6 @@
     return longestSubstring;
   }
   
-  console.log(longestUniqueSubstring("abcabcbb"));
+  console.log(longestUniqueSubstring("abcabcbbdetab"));
   // Output: "abc"
   
