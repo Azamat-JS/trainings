@@ -11,10 +11,10 @@ const BookSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'must provide price'],
     },
-    author:{
+    author:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Author',
-        required: true  }
+        required: true  }]
 })
 
 

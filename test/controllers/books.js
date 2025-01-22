@@ -1,5 +1,4 @@
 const Book = require('../models/book')
-const { createCustomError } = require('../errors/custom-error')
 const Author = require('../models/author')
 
 
@@ -14,7 +13,7 @@ const getBooks = async(req, res) => {
 
 const addBook = async(req, res) => {
   try {
-    const {name, price, authorId} = req.body
+    const {name, price, authorName} = req.body
 
     const author = await Author.findById(authorId)
     if(!author){

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
+const book = require('./book');
 
 const AuthorSchema = new mongoose.Schema({
-    _id: mongoose.Schema.Types.ObjectId,
     name: {
         type: String,
         required: [true, 'must provide name'],
@@ -11,7 +11,12 @@ const AuthorSchema = new mongoose.Schema({
     age: {
         type: Number,
         required: [true, 'must provide age'],
-    }
+    },
+    books: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Book',
+    }]
+
 });
 
 module.exports = mongoose.model('Author', AuthorSchema);
