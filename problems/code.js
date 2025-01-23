@@ -293,3 +293,15 @@
 // }
 // console.timeEnd('label')
 
+//----------------- calculating time in function -------------
+
+// function loadData(){
+//    console.time('loadData')
+
+//    for (let i = 0; i < 10000000; i++) {
+//     //pretend to load some data
+//    }
+
+//    console.timeEnd('loadData')
+// }
+// loadData()
