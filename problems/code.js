@@ -260,26 +260,36 @@
 // log(new Date(), 'debug', 'someDebug');
 
 //------^^^^^^^^^^^^
-function findSmallest(arr) {
-  let smallest = arr[0];
-  let smallest_index = 0;
-  for (let i = 1; i < arr.length; i++) { // Start from index 1
-    if (arr[i] < smallest) {
-      smallest = arr[i];
-      smallest_index = i;
-    }
-  }
-  return smallest_index;
-}
+// function findSmallest(arr) {
+//   let smallest = arr[0];
+//   let smallest_index = 0;
+//   for (let i = 1; i < arr.length; i++) { // Start from index 1
+//     if (arr[i] < smallest) {
+//       smallest = arr[i];
+//       smallest_index = i;
+//     }
+//   }
+//   return smallest_index;
+// }
 
-function selectionSort(arr) {
-  let newArr = [];
-  while (arr.length > 0) {
-    let smallestIndex = findSmallest(arr);
-    let smallest = arr.splice(smallestIndex, 1)[0]; // Remove the smallest element
-    newArr.push(smallest); // Add the smallest to the new array
-  }
-  return newArr;
-}
+// function selectionSort(arr) {
+//   let newArr = [];
+//   while (arr.length > 0) {
+//     let smallestIndex = findSmallest(arr);
+//     let smallest = arr.splice(smallestIndex, 1)[0]; // Remove the smallest element
+//     newArr.push(smallest); // Add the smallest to the new array
+//   }
+//   return newArr;
+// }
 
-console.log(selectionSort([5, 3, 2, 8, 6])); // [2, 3, 5, 6, 8]
+// console.log(selectionSort([5, 3, 2, 8, 6])); // [2, 3, 5, 6, 8]
+
+
+//-------------- calculating time --------------
+
+// console.time('label')
+// for (let i = 0; i < 1000000; i++) {
+
+// }
+// console.timeEnd('label')
+
