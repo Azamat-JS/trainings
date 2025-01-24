@@ -176,25 +176,25 @@
  
 //--------------- exercise static -----
 
-class User {
-    static userCount = 0
+// class User {
+//     static userCount = 0
 
-    constructor(username){
-        this.username = username
-        User.userCount++
-    }
-    static getUserCount(){
-   console.log(`There are ${User.userCount} users online`);
+//     constructor(username){
+//         this.username = username
+//         User.userCount++
+//     }
+//     static getUserCount(){
+//    console.log(`There are ${User.userCount} users online`);
    
-    }
-    sayHi(){
-        console.log(`hi my username is ${this.username}`); 
-    }
-}
-const user1 = new User('Ilyos')
-const user2 = new User('Olim')
-const user3 = new User('Olim')
-user1.sayHi()
-user3.sayHi()
-User.getUserCount()
+//     }
+//     sayHi(){
+//         console.log(`hi my username is ${this.username}`); 
+//     }
+// }
+// const user1 = new User('Ilyos')
+// const user2 = new User('Olim')
+// const user3 = new User('Olim')
+// user1.sayHi()
+// user3.sayHi()
+// User.getUserCount()
 
