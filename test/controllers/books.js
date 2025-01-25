@@ -4,7 +4,10 @@ const Author = require('../models/author')
 
 const getBooks = async(req, res) => {
     try {
-        const books = await Book.find({}).populate('author', 'name')
+        const books = await Book.find().byName("Jamol").exec((err, books)=> {
+          console.log(books);
+          
+        })
         res.status(200).json({books})   
     } catch (error) {
       res.status(500).json({msg: error.message}) 
@@ -13,7 +16,7 @@ const getBooks = async(req, res) => {
 
 const addBook = async(req, res) => {
   try {
-    const {name, price, authorName} = req.body
+    const {name, price, authorName, authorId} = req.body
 
     const author = await Author.findById(authorId)
     if(!author){
