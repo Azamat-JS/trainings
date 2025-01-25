@@ -1,0 +1,14 @@
+{
+  method: 'GET',
+  isAuthenticated: true,
+  message: 'logger info',
+  level: 'info',
+  timestamp: '2025-01-25T18:22:33.614Z'
+}
+{
+  method: 'GET',
+  isAuthenticated: true,
+  message: 'logger error',
+  level: 'error',
+  timestamp: '2025-01-25T18:22:33.618Z'
+}
