@@ -228,3 +228,15 @@
 // processValue('you are at home')
 // processValue(34)
 
+const john: {id:number; name: string, isActive: boolean} = {
+    id:1,
+    name: 'john',
+    isActive:true
+}
+
+const susan: {id:number, name: string, isActive: boolean} = {
+    id:1,
+    name:'susan',
+    isActive:false
+}
+

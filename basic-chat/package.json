@@ -1,0 +1,21 @@
+{
+  "name": "basic-chat",
+  "version": "1.0.0",
+  "main": "posts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node posts.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.9",
+    "socket-chat-example": "^0.0.1",
+    "socket.io": "^4.8.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
