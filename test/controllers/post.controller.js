@@ -1,4 +1,5 @@
 const PostService = require('../service/post.service')
+const checkTime = require('../middleware/checkTime')
 
 class PostController {
   async create(req, res, next){
@@ -12,6 +13,8 @@ class PostController {
 
   async getAll(req, res, next){
     try {
+      console.log(req.checkTime);
+      
       const allPosts = await PostService.getAll()
       res.status(200).json(allPosts)
     } catch (error) {
