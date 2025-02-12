@@ -1,5 +1,5 @@
 const checkTime = function(req, res, next){
-    req.checkTime = `${new Date().getDay()}:${new Date().getMonth()}:${new Date().getFullYear()}`
+    req.checkTime = Date.now()
   next()
 }
 

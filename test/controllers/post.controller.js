@@ -1,10 +1,9 @@
 const PostService = require('../service/post.service')
-const checkTime = require('../middleware/checkTime')
 
 class PostController {
   async create(req, res, next){
     try {
-      const newPost = await PostService.create(req.body, req.files.picture, author)
+      const newPost = await PostService.create(req.body, req.files.picture)
       res.status(201).json(newPost)   
     } catch (error) {
       next(error)
@@ -14,7 +13,6 @@ class PostController {
   async getAll(req, res, next){
     try {
       console.log(req.checkTime);
-      
       const allPosts = await PostService.getAll()
       res.status(200).json(allPosts)
     } catch (error) {
@@ -41,14 +39,17 @@ class PostController {
     }
   }
 
-  async delete(req, res, next){
-    try{
-    const deletedPost = await PostService.delete(req.params.id)
-    res.status(200).send('post was edited successfully')
-  }catch(error){
-    next(error)
+  async delete(req, res, next) {
+    try {
+      const deletedPost = await PostService.delete(req.params.id);
+      if (!deletedPost) {
+        return res.status(404).json({ message: 'Post not found' });
+      }
+      res.status(200).json({ message: 'Post was deleted successfully' });
+    } catch (error) {
+      next(error);
+    }
   }
-}
-}
+}  
 
 module.exports = new PostController()

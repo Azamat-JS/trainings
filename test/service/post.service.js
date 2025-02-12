@@ -2,9 +2,9 @@ const Post = require('../models/postSchema')
 const fileService = require('./file.service')
 
 class PostService {
-    async create(post, picture, author ){
+    async create(post, picture){
         const fileName = fileService.save(picture)
-        const newFile = await Post.create({...post, picture: fileName, author})
+        const newFile = await Post.create({...post, picture: fileName})
         return newFile
     }
 

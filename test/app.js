@@ -4,10 +4,12 @@ const connectDB = require('./db/connect')
 require('dotenv').config()
 const postRouter = require('./routes/post.router')
 const cors = require('cors')
+const fileupload = require('express-fileupload')
 const checkTime = require('./middleware/checkTime')
 
 // middleware
 app.use(checkTime)
+app.use(fileupload({}))
 app.use(express.json())
 app.use(cors({credentials: true}))
 
