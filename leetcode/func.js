@@ -50,6 +50,26 @@
 // console.log(func());
 // console.log(func());
 
+//-------------------
+
+// const expect = function(val){
+//     return {
+//         tobe: (val2) => {
+//             if(val === val2) return true;
+//             else throw new Error("Not Equal")
+//         },
+//         notToBe: (val2) => {
+//             if(val !== val2) return true;
+//             else throw new Error('Equal')
+//         }
+//     };
+// };
+
+// const ex = expect(5)
+// console.log(ex.tobe(5));
+// console.log(ex.notToBe(10));
+// console.log(ex.tobe(10));
+// console.log(ex.notToBe(5));
 
 
 
