@@ -86,6 +86,8 @@
 // console.log(c.reset());
 // console.log(c.increment());
 
+//--------------- map
+
 // let map = function(arr, fn){
 //     const array = [];
 //     for (let i = 0; i < arr.length; i++) {
@@ -104,7 +106,7 @@
 // console.log(map(nums, (n, i) => n + i));
 // console.log(map(nums, (n) => 42 ));
 
-//----------------
+//---------------- filter
 
 // let filter = function(arr, fn){
 //   let result = [];
@@ -117,3 +119,12 @@
 // }
 // const t = [1,2, 3, 6]
 // console.log(filter(t, (v) => v % 2 === 0));
+
+//------------ reduce
+var reduce = function(nums, fn, init) {
+    let res = init;
+    for(let i = 0; i < nums.length; i++){
+        res = fn(res, nums[i])
+    }
+    return res
+};
