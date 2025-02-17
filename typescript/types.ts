@@ -49,9 +49,24 @@ const favoriteThings = ["books", "laptop", "watch", "smartphone"]
 const voters = [{name:'Abror', age: 45}, {name:'Bobur', age: 30}]
 
 function getLastItem<T>(array:T[]):T | undefined{
-    return array[array.length - 1]
-    
+    return array[array.length - 1] 
 }
-getLastItem(voters)
-getLastItem(favoriteThings)
-getLastItem(gameScores)
+console.log(getLastItem(voters))
+console.log(getLastItem(favoriteThings))
+console.log(getLastItem(gameScores))
+
+//-------- Email validation
+
+// function isValidEmail(email: string): boolean {
+//     return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+//   }
+  
+//   console.log(isValidEmail('bob@gmail.com'));   // ✅ true
+//   console.log(isValidEmail('bob@company.io'));  // ✅ true
+//   console.log(isValidEmail('bob123@domain.org'));// ✅ true
+//   console.log(isValidEmail('bob.email@site.net'));// ✅ true
+//   console.log(isValidEmail('bobemail.com'));    // ❌ false (missing @)
+//   console.log(isValidEmail('@gmail.com'));      // ❌ false (missing local part)
+//   console.log(isValidEmail('bob@.com'));        // ❌ false (invalid domain)
+//   console.log(isValidEmail('bob@site.'));       // ❌ false (incomplete TLD)
+  
