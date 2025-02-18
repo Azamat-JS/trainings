@@ -1,17 +1,10 @@
+"use strict";
 //----------------- 1 - Array with tuple
 // function nums(n:number[]):number{
 //   let sum = n.reduce((acc, curr) => acc + curr, 0)
 //   return sum
 // }
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
+Object.defineProperty(exports, "__esModule", { value: true });
 // console.log(nums([12, 34, 45]));
 //--------- 2 -
 // function str(word:string[]):void{
@@ -146,21 +139,97 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 // }
 // console.log(getPermutations("abc"));
 // -------------- 4
-function jsonDiff(obj1, obj2) {
-    var diff = {};
-    var keys1 = Object.keys(obj1);
-    var keys2 = Object.keys(obj2);
-    var allKeys = __spreadArray(__spreadArray([], keys1, true), keys2.filter(function (key) { return !keys1.includes(key); }), true); // Get unique keys manually
-    for (var _i = 0, allKeys_1 = allKeys; _i < allKeys_1.length; _i++) {
-        var key = allKeys_1[_i];
-        var oldValue = obj1[key];
-        var newValue = obj2[key];
-        if (oldValue !== newValue) {
-            diff[key] = { old: oldValue, new: newValue };
+// function jsonDiff(obj1:object, obj2:object):object{
+//   let diff:Record<string, any> = {}
+//   let keys1 = Object.keys(obj1)
+//   let keys2 = Object.keys(obj2)
+//   let allKeys = [...keys1, ...keys2.filter(key => !keys1.includes(key))]
+//   for (let key of allKeys) {
+//     let oldValue = (obj1 as Record<string, any>)[key];
+//     let newValue = (obj2 as Record<string, any>)[key];
+//     if(oldValue !== newValue){
+//       diff[key] = {old: oldValue, new: newValue}
+//     }
+//   }
+//   return diff;
+// }
+//   const oldData = { name: 'ali', age: 25, city: 'tashkent' };
+//   const newData = { name: 'ali', age: 26, country: 'uzbekistan' };
+//   console.log(jsonDiff(oldData, newData));
+//--------------- 5
+// function sortIPs(ips: string[]): string[] {
+//   return ips.sort((a, b) => {
+//     const numA = a.split('.').map(Number);
+//     const numB = b.split('.').map(Number);
+//     for (let i = 0; i < 4; i++) {
+//       if (numA[i] !== numB[i]) {
+//         return numA[i] - numB[i];
+//       }
+//     }
+//     return 0;
+//   });
+// }
+// console.log(sortIPs(['192.168.0.1', '192.168.1.1', '172.16.0.1', '10.0.0.1']));
+//-------- ---- 6
+// function compressString(str:string):string{
+//   let result = '';
+//   let sum = 1
+//   for (let i = 0; i < str.length; i++) {
+//     while(i < str.length - 1 && str[i] === str[i + 1]){
+//       sum++;
+//       i++;
+//     }
+//     result += str[i] + sum;
+//     sum = 1
+//   }
+//   return result
+// }
+// console.log(compressString('gguuiiiop'));
+// console.log(compressString('apple'));
+// --------------- 7
+// function isValidSudoku(board: number[][]): boolean {
+//   const size = 9;
+//   const rows = new Array(size).fill(null).map(() => new Set<number>());
+//   const cols = new Array(size).fill(null).map(() => new Set<number>());
+//   const boxes = new Array(size).fill(null).map(() => new Set<number>());
+//   for (let i = 0; i < size; i++) {
+//     for (let j = 0; j < size; j++) {
+//       const num = board[i][j];
+//       if (num === 0) continue;
+//       const boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);
+//       if (rows[i].has(num) || cols[j].has(num) || boxes[boxIndex].has(num)) {
+//         return false;
+//       }
+//       rows[i].add(num);
+//       cols[j].add(num);
+//       boxes[boxIndex].add(num);
+//     }
+//   }
+//   return true;
+// }
+// const board = [
+//   [5, 1, 4, 0, 7, 3, 2, 0, 9],
+//   [3, 5, 9, 8, 1, 6, 0, 4, 7],
+//   [6, 9, 3, 2, 5, 7, 1, 8, 0],
+//   [8, 6, 2, 1, 4, 9, 3, 5, 7],
+//   [7, 2, 8, 5, 6, 1, 4, 9, 3],
+//   [1, 7, 6, 9, 2, 8, 5, 3, 4],
+//   [9, 3, 5, 7, 8, 4, 6, 1, 2],
+//   [2, 4, 7, 3, 9, 5, 8, 6, 1],
+//   [4, 8, 1, 6, 3, 2, 9, 7, 5]
+// ];
+// console.log(isValidSudoku(board));
+//--------------- 8 anagrams
+function groupAnagrams(words) {
+    var map = {};
+    for (var _i = 0, words_1 = words; _i < words_1.length; _i++) {
+        var word = words_1[_i];
+        var sortedWord = word.split('').sort().join('');
+        if (!map[sortedWord]) {
+            map[sortedWord] = [];
         }
+        map[sortedWord].push(word);
     }
-    return diff;
+    return Object.values(map);
 }
-var oldData = { name: 'ali', age: 25, city: 'tashkent' };
-var newData = { name: 'ali', age: 26, country: 'uzbekistan' };
-console.log(jsonDiff(oldData, newData));
+console.log(groupAnagrams(['eat', 'tea', 'ate', 'ten', 'net', 'bag']));

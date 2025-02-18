@@ -4,6 +4,8 @@
 //   return sum
 // }
 
+import { setCommentRange } from "typescript";
+
 // console.log(nums([12, 34, 45]));
 
 
@@ -186,27 +188,127 @@
   
   // -------------- 4
 
-  function jsonDiff(obj1: object, obj2: object): object {
-    let diff: Record<string, any> = {}; 
+// function jsonDiff(obj1:object, obj2:object):object{
+//   let diff:Record<string, any> = {}
+
+//   let keys1 = Object.keys(obj1)
+//   let keys2 = Object.keys(obj2)
+//   let allKeys = [...keys1, ...keys2.filter(key => !keys1.includes(key))]
+
+//   for (let key of allKeys) {
+//     let oldValue = (obj1 as Record<string, any>)[key];
+//     let newValue = (obj2 as Record<string, any>)[key];
+
+//     if(oldValue !== newValue){
+//       diff[key] = {old: oldValue, new: newValue}
+//     }
+//   }
+//   return diff;
+// }
+
   
-    let keys1 = Object.keys(obj1);
-    let keys2 = Object.keys(obj2);
-    let allKeys = [...keys1, ...keys2.filter(key => !keys1.includes(key))]; // Get unique keys manually
+//   const oldData = { name: 'ali', age: 25, city: 'tashkent' };
+//   const newData = { name: 'ali', age: 26, country: 'uzbekistan' };
   
-    for (let key of allKeys) {
-      let oldValue = (obj1 as Record<string, any>)[key]; 
-      let newValue = (obj2 as Record<string, any>)[key]; 
+//   console.log(jsonDiff(oldData, newData));
+
   
-      if (oldValue !== newValue) {
-        diff[key] = { old: oldValue, new: newValue };
-      }
+//--------------- 5
+// function sortIPs(ips: string[]): string[] {
+//   return ips.sort((a, b) => {
+//     const numA = a.split('.').map(Number);
+//     const numB = b.split('.').map(Number);
+    
+//     for (let i = 0; i < 4; i++) {
+//       if (numA[i] !== numB[i]) {
+//         return numA[i] - numB[i];
+//       }
+//     }
+    
+//     return 0;
+//   });
+// }
+
+// console.log(sortIPs(['192.168.0.1', '192.168.1.1', '172.16.0.1', '10.0.0.1']));
+
+//-------- ---- 6
+
+// function compressString(str:string):string{
+//   let result = '';
+//   let sum = 1
+//   for (let i = 0; i < str.length; i++) {
+//     while(i < str.length - 1 && str[i] === str[i + 1]){
+//       sum++;
+//       i++;
+//     }
+//     result += str[i] + sum;
+//     sum = 1
+//   }
+//   return result
+// }
+
+// console.log(compressString('gguuiiiop'));
+// console.log(compressString('apple'));
+
+// --------------- 7
+
+// function isValidSudoku(board: number[][]): boolean {
+//   const size = 9;
+
+//   const rows = new Array(size).fill(null).map(() => new Set<number>());
+//   const cols = new Array(size).fill(null).map(() => new Set<number>());
+//   const boxes = new Array(size).fill(null).map(() => new Set<number>());
+
+//   for (let i = 0; i < size; i++) {
+//     for (let j = 0; j < size; j++) {
+//       const num = board[i][j];
+//       if (num === 0) continue;
+
+//       const boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);
+
+//       if (rows[i].has(num) || cols[j].has(num) || boxes[boxIndex].has(num)) {
+//         return false;
+//       }
+
+//       rows[i].add(num);
+//       cols[j].add(num);
+//       boxes[boxIndex].add(num);
+//     }
+//   }
+
+//   return true;
+// }
+
+// const board = [
+//   [5, 1, 4, 0, 7, 3, 2, 0, 9],
+//   [3, 5, 9, 8, 1, 6, 0, 4, 7],
+//   [6, 9, 3, 2, 5, 7, 1, 8, 0],
+//   [8, 6, 2, 1, 4, 9, 3, 5, 7],
+//   [7, 2, 8, 5, 6, 1, 4, 9, 3],
+//   [1, 7, 6, 9, 2, 8, 5, 3, 4],
+//   [9, 3, 5, 7, 8, 4, 6, 1, 2],
+//   [2, 4, 7, 3, 9, 5, 8, 6, 1],
+//   [4, 8, 1, 6, 3, 2, 9, 7, 5]
+// ];
+
+// console.log(isValidSudoku(board));
+
+
+//--------------- 8 anagrams
+
+function groupAnagrams(words: string[]): string[][] {
+  const map: Record<string, string[]> = {};
+
+  for (const word of words) {
+    const sortedWord = word.split('').sort().join('');
+    if (!map[sortedWord]) {
+      map[sortedWord] = []; 
     }
-  
-    return diff;
+    map[sortedWord].push(word);
   }
-  
-  const oldData = { name: 'ali', age: 25, city: 'tashkent' };
-  const newData = { name: 'ali', age: 26, country: 'uzbekistan' };
-  
-  console.log(jsonDiff(oldData, newData));
-  
+
+  return Object.values(map);
+}
+
+console.log(groupAnagrams(['eat', 'tea', 'ate', 'ten', 'net', 'bag']));
+
