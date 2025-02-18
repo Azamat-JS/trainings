@@ -92,9 +92,9 @@
 
 ///--------- 2
 
-function loop(num: number):never{
-  throw new Error('Type of num can not be string')
-}
+// function loop(num: number):never{
+//   throw new Error('Type of num can not be string')
+// }
 
 /// --------------- 1 Additional tasks
 
@@ -124,3 +124,89 @@ function loop(num: number):never{
 // console.log(getLastItem(gameScores))
 // console.log(getLastItem(favoriteThings))
 // console.log(getLastItem(voters))
+
+//////----------  Homework
+//---------1
+// const data = { name: 'ali', age: 23, country: 'Uzbekistan' };
+
+// function upperCaseKeys(obj: object): object {
+//   const newObj: Record<string, any> = {};
+//   for (let key in obj) {
+//     newObj[key.toUpperCase()] = (obj as Record<string, any>)[key];
+//   }
+//   return newObj;
+// }
+
+// console.log(upperCaseKeys(data));
+
+  //-------------- 2
+  // function fizzBuzz(n:number):string[]{
+  //   let arr = []
+  //   for (let i = 1; i <= n; i++) {
+  //     if(i % 3 === 0){
+  //       arr.push('Fizz')
+  //       continue;
+  //     }if(i % 5 === 0){
+  //       arr.push("Buzz")
+  //       continue;
+  //     }if(i % 15 === 0){
+  //       arr.push('FizzBuzz')
+  //       continue;
+  //     }else{
+  //       arr.push(String(i))
+  //     }
+  //   }
+  //   return arr
+  // }
+  // console.log(fizzBuzz(15));
+  
+
+  // ------------ 3
+
+  // function getPermutations(str: string): string[] {
+  //   if (str.length <= 1) return [str];
+  
+  //   let permutations: string[] = [];
+  
+  //   for (let i = 0; i < str.length; i++) {
+  //     let char = str[i]; 
+  //     let remainingStr = str.slice(0, i) + str.slice(i + 1);
+  
+  //     let subPermutations = getPermutations(remainingStr); 
+  
+  //     for (let perm of subPermutations) {
+  //       permutations.push(char + perm);
+  //     }
+  //   }
+  
+  //   return permutations;
+  // }
+  
+  // console.log(getPermutations("abc"));
+  
+  // -------------- 4
+
+  function jsonDiff(obj1: object, obj2: object): object {
+    let diff: Record<string, any> = {}; 
+  
+    let keys1 = Object.keys(obj1);
+    let keys2 = Object.keys(obj2);
+    let allKeys = [...keys1, ...keys2.filter(key => !keys1.includes(key))]; // Get unique keys manually
+  
+    for (let key of allKeys) {
+      let oldValue = (obj1 as Record<string, any>)[key]; 
+      let newValue = (obj2 as Record<string, any>)[key]; 
+  
+      if (oldValue !== newValue) {
+        diff[key] = { old: oldValue, new: newValue };
+      }
+    }
+  
+    return diff;
+  }
+  
+  const oldData = { name: 'ali', age: 25, city: 'tashkent' };
+  const newData = { name: 'ali', age: 26, country: 'uzbekistan' };
+  
+  console.log(jsonDiff(oldData, newData));
+  
