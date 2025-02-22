@@ -12,7 +12,7 @@
 // const afterPen = calculateScore(120)
 // console.log(afterPenalty);
 // console.log(afterPen);
-//-----------------
+//------------------ 
 // function sum(text:string, ...numbers:number[]){
 //     const doubled = numbers.map((num) => num * 2)
 //     console.log(doubled);

@@ -4,7 +4,6 @@
 //   return sum
 // }
 
-import { setCommentRange } from "typescript";
 
 // console.log(nums([12, 34, 45]));
 
