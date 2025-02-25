@@ -42,7 +42,7 @@
 // }
 
 // MyObj.prototype.verifying = function(){
-//     return `${this.name} you joined to this group`
+//     return `${this.name} joined to this group`
 // }
 // const person1 = new MyObj("Ali")
 // const person2 = new MyObj("Aziz")
