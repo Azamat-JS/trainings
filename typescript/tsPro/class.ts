@@ -59,3 +59,18 @@
 // car.drive()
 
 
+// decorators
+
+// function log(target:any, key:string){
+//     console.log(`${key} was called`);  
+// }
+
+// class Example {
+//     @log
+//     greeting(){
+//         console.log('salom');
+        
+//     }
+// }
+// const ex = new Example()
+// ex.greeting()

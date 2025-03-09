@@ -208,3 +208,28 @@
 //     data:[12, 'log']
 // }
 
+// let a: void = undefined; // OK
+
+// let b: never = undefined; // ERROR
+
+// type Shape = 'circle' | 'square';
+
+// function getArea(shape: Shape): number {
+//   switch (shape) {
+//     case 'circle': return Math.PI;
+//     case 'square': return 1;
+//     default: 
+//       const _exhaustiveCheck: never = shape;
+//       return _exhaustiveCheck;  // OK
+//   }
+// }
+// function getShapeArea(shape: Shape): number {
+//   switch (shape) {
+//     case 'circle': return Math.PI;
+//     case 'square': return 1;
+//     default: 
+//       const _exhaustiveCheck: void = shape; 
+//       return _exhaustiveCheck;  // ERROR
+//   }
+// }
+
