@@ -3,11 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="server.js"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <ul class="list-of-info">
+                <li class="info-name">Azamat Abdullayev</li>
+                <li class="info-email">💌 azamat.abdullaev.d@gmail.com</li>
+                <li class="info-phone">📱+998(91)-092-83-53</li>
+            </ul>
+            <nav>
+                <a class="link-list" href="#about">About Me</a>
+                <a class="link-list" href="#skills">Skills</a>
+                <a class="link-list" href="#projects">Projects</a>
+                <a class="link-list" href="#recommendations">Recommendations</a>
+            </nav>
+        </div>
 
+        <div class="personel-div">
+            <img class="myimg" src="./img/myphoto.jpg" alt="myphoto">
+            <section id="about">
+                <h1 class="about-header">Hi, I'm Azamat Abdullayev!</h1>
+                <p class="about-par">I am a full-stack developer with more than 6 months of experience in both application and presentation layers. I have created several projects using NodeJS, MongoDB, ReactJS, TypeScript, and PostgreSQL.</p>
+            </section>
+        </div>
 
-    <script src="window.js"></script>
+        <div class="skills">
+            <h2 class="skills-header">Skills</h2>
+            <ul class="skill-list">
+                <li>
+                    <img class="logo" src="./img/html.png" alt="">
+                    <p class="skill-list-header">HTML</p>
+                    <p class="skill-list-content">0.5 years experience</p>
+                </li>
+                <li>
+                    <img class="logo" src="./img/jslogo.jpeg" alt="">
+                    <p class="skill-list-header">JavaScript</p>
+                    <p class="skill-list-content">0.5 years experience</p>
+                </li>
+                <li>
+                    <img class="logo" src="./img/Bootstrap_logo.svg.png" alt="">
+                    <p class="skill-list-header">Bootstrap</p>
+                    <p class="skill-list-content">0.5 years experience</p>
+                </li>
+                <li>
+                    <img class="logo" src="./img/react.png" alt="">
+                    <p class="skill-list-header">React</p>
+                    <p class="skill-list-content">0.5 years experience</p>
+                </li>
+                <li>
+                    <img class="logo" src="./img/nodejs.png" alt="">
+                    <p class="skill-list-header">NodeJS</p>
+                    <p class="skill-list-content">0.5 years experience</p>
+                </li>
+                <li>
+                    <img class="logo" src="./img/css.png" alt="">
+                    <p class="skill-list-header">CSS</p>
+                    <p class="skill-list-content">0.5 years experience</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="projects">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <h3>Car-Sales</h3>
+                <li class="project-list-item">Developed and deployed successfully. It has several features like authorization and authentication with CRUD operations. It can make getting info immediately</li>
+                
+                <h3>Library-Management</h3>
+                <li class="project-list-item">Developed and deployed with amazing features like populate login registeration operations are available for users. This project can also be used get info about authors and books easily</li>
+                
+                <h3>Project-Server</h3>
+                <li class="project-list-item">Created a styled multi-page website companies that work with several clients for doing their projects. This project has beatiful appearance with logos and content structure.</li>
+            </ul>
+        </div>
+
+        <div class="recommend">
+            <h2>Recommendations</h2>
+            <ul class="recommend-list">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, amet doloribus veritatis iusto explicabo, dolore odit sint quisquam animi pariatur at, quae minima vel magnam iste reprehenderit cumque obcaecati sit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, amet doloribus veritatis iusto explicabo, dolore odit sint quisquam animi pariatur at, quae minima vel magnam iste reprehenderit cumque obcaecati sit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, amet doloribus veritatis iusto explicabo, dolore odit sint quisquam animi pariatur at, quae minima vel magnam iste reprehenderit cumque obcaecati sit.</li>
+            </ul>
+        </div>
+
+        <img class="homeimg" src="./img/homeicon.png">
+        <form>
+            <h3 class="form-header">Leave a Recommendation</h3>
+            <input id="input-form" type="text" placeholder="Name (Optional)">
+            <br>
+            <textarea id="textIn" cols="30" rows="10" placeholder="Message"></textarea>
+            <br>
+            <button onclick="addRecommendation(event)" type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function addRecommendation(event){
+            event.preventDefault();
+            
+            const input = document.getElementById("textIn");
+            const recommendText = input.value.trim();
+
+            if(recommendText !== ""){
+                const ul = document.querySelector(".recommend-list")
+                const li = document.createElement("li")
+                
+                const span = document.createElement('span')
+                span.textContent = recommendText;
+
+                li.appendChild(span)
+                ul.appendChild(li)
+                alert("Thank you for submitting a recommendation!")
+                input.value = ""
+            }else{
+                alert("Please enter a valid text")
+            }
+        }
+        document.getElementById("recommendForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    addRecommendation();
+});
+    </script>
 </body>
 </html>
+

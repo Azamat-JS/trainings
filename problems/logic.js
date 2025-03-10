@@ -58,3 +58,27 @@
 // }
 
 // validatePasswords(passwords)
+
+//------------------------
+
+// const products = [
+//     {name: "Laptop", stock: 5},
+//     {name: "Phone", stock: 0},
+//     {name: "Watch", stock: 2},
+//     {name: "Mouse", stock: 0},
+// ]
+
+// function checkStockLevels(massiv){
+//     for (let i = 0; i < massiv.length; i++) {
+//         if(massiv[i].stock > 0){
+//             console.log(`${massiv[i].name} is In Stock`);            
+//         }else{
+//             console.log(`${massiv[i].name} is Out of stock`);            
+//         }
+//     }
+// }
+
+// checkStockLevels(products)
+
+let a = new String('Kl')
+console.log(a);
