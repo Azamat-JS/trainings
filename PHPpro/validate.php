@@ -13,7 +13,7 @@
        <input type="text" name="age"><br>
        email:<br>
        <input type="text" name="email"><br>
-       <input type="submit" name="login" value="login">
+       <input type="submit" name="login" value="Log in">
     </form>
 </body>
 </html>
@@ -22,16 +22,24 @@
 if(isset($_POST["login"])){
     $username = filter_input(INPUT_POST, "username",
                             FILTER_SANITIZE_SPECIAL_CHARS);
-    
+    echo "Hi, {$username}<br>";
+
     $age = filter_input(INPUT_POST, "age",
                         FILTER_VALIDATE_INT);
 
-    // $email = filter_input(INPUT_POST, "email",
-    //                     FILTER_SANITIZE_EMAIL);
+    if(empty($age)){
+        echo "That number wasn't valid<br>";
+    }else{
+    echo "You are {$age}<br>";
+    }
 
     $email = filter_input(INPUT_POST, "email",
                         FILTER_VALIDATE_EMAIL);
 
-    echo "You are $email";
+    if(empty($email)){
+        echo "That wasn't valid email";
+    }else{
+        echo "Your email: {$email}";
+    }
 }
 ?>
