@@ -17,7 +17,7 @@ export class ApiGatewayController {
   @Post('order')
   createOrder(@Body() order:any){
     this.client.emit('order-created', order);
-    console.log('order sent ')    
+    console.log('order sent ') 
     return {message: 'Order sent to RMQ from api-gateway'}
   }
 }

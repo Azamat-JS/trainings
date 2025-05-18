@@ -2,25 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./apps/order-service/src/constants.ts":
-/*!*********************************************!*\
-  !*** ./apps/order-service/src/constants.ts ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.NOTIFICATION_SERVICE_RABBITMQ = exports.PAYMENT_SERVICE_RABBITMQ = void 0;
-exports.PAYMENT_SERVICE_RABBITMQ = 'rabbitMQ_order_service';
-exports.NOTIFICATION_SERVICE_RABBITMQ = 'rabbitMQ_notification_service';
-
-
-/***/ }),
-
-/***/ "./apps/order-service/src/order-service.controller.ts":
-/*!************************************************************!*\
-  !*** ./apps/order-service/src/order-service.controller.ts ***!
-  \************************************************************/
+/***/ "./apps/notification/src/notification.controller.ts":
+/*!**********************************************************!*\
+  !*** ./apps/notification/src/notification.controller.ts ***!
+  \**********************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -36,59 +21,60 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var _a, _b, _c;
+var _a;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.OrderServiceController = void 0;
+exports.NotificationController = void 0;
 const common_1 = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-const order_service_service_1 = __webpack_require__(/*! ./order-service.service */ "./apps/order-service/src/order-service.service.ts");
+const notification_service_1 = __webpack_require__(/*! ./notification.service */ "./apps/notification/src/notification.service.ts");
 const microservices_1 = __webpack_require__(/*! @nestjs/microservices */ "@nestjs/microservices");
-const constants_1 = __webpack_require__(/*! ./constants */ "./apps/order-service/src/constants.ts");
-let OrderServiceController = class OrderServiceController {
-    orderService;
-    paymentClient;
-    notificationClient;
-    constructor(orderService, paymentClient, notificationClient) {
-        this.orderService = orderService;
-        this.paymentClient = paymentClient;
-        this.notificationClient = notificationClient;
+let NotificationController = class NotificationController {
+    notificationService;
+    constructor(notificationService) {
+        this.notificationService = notificationService;
     }
-    getData() {
-        return this.orderService.getData();
+    getHello() {
+        return this.notificationService.getHello();
     }
-    handleOrderCreated(order) {
-        console.log('Order service received new order', order);
-        this.paymentClient.emit("process-payment", order);
-        this.notificationClient.emit('order-created', order);
+    handlePaymentSucced(order) {
+        console.log('Payment carried out successfully', order);
+    }
+    handleOrderCreate(order) {
+        console.log('Order created successfully', order);
     }
 };
-exports.OrderServiceController = OrderServiceController;
+exports.NotificationController = NotificationController;
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)
-], OrderServiceController.prototype, "getData", null);
+], NotificationController.prototype, "getHello", null);
 __decorate([
-    (0, microservices_1.EventPattern)('order-created'),
+    (0, microservices_1.EventPattern)('payment-succed'),
     __param(0, (0, microservices_1.Payload)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
-], OrderServiceController.prototype, "handleOrderCreated", null);
-exports.OrderServiceController = OrderServiceController = __decorate([
+], NotificationController.prototype, "handlePaymentSucced", null);
+__decorate([
+    (0, microservices_1.EventPattern)("order-created"),
+    __param(0, (0, microservices_1.Payload)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], NotificationController.prototype, "handleOrderCreate", null);
+exports.NotificationController = NotificationController = __decorate([
     (0, common_1.Controller)(),
-    __param(1, (0, common_1.Inject)(constants_1.PAYMENT_SERVICE_RABBITMQ)),
-    __param(2, (0, common_1.Inject)(constants_1.NOTIFICATION_SERVICE_RABBITMQ)),
-    __metadata("design:paramtypes", [typeof (_a = typeof order_service_service_1.OrderServiceService !== "undefined" && order_service_service_1.OrderServiceService) === "function" ? _a : Object, typeof (_b = typeof microservices_1.ClientProxy !== "undefined" && microservices_1.ClientProxy) === "function" ? _b : Object, typeof (_c = typeof microservices_1.ClientProxy !== "undefined" && microservices_1.ClientProxy) === "function" ? _c : Object])
-], OrderServiceController);
+    __metadata("design:paramtypes", [typeof (_a = typeof notification_service_1.NotificationService !== "undefined" && notification_service_1.NotificationService) === "function" ? _a : Object])
+], NotificationController);
 
 
 /***/ }),
 
-/***/ "./apps/order-service/src/order-service.module.ts":
-/*!********************************************************!*\
-  !*** ./apps/order-service/src/order-service.module.ts ***!
-  \********************************************************/
+/***/ "./apps/notification/src/notification.module.ts":
+/*!******************************************************!*\
+  !*** ./apps/notification/src/notification.module.ts ***!
+  \******************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -99,57 +85,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.OrderServiceModule = void 0;
+exports.NotificationModule = void 0;
 const common_1 = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-const order_service_controller_1 = __webpack_require__(/*! ./order-service.controller */ "./apps/order-service/src/order-service.controller.ts");
-const order_service_service_1 = __webpack_require__(/*! ./order-service.service */ "./apps/order-service/src/order-service.service.ts");
-const microservices_1 = __webpack_require__(/*! @nestjs/microservices */ "@nestjs/microservices");
-const constants_1 = __webpack_require__(/*! ./constants */ "./apps/order-service/src/constants.ts");
-let OrderServiceModule = class OrderServiceModule {
+const notification_controller_1 = __webpack_require__(/*! ./notification.controller */ "./apps/notification/src/notification.controller.ts");
+const notification_service_1 = __webpack_require__(/*! ./notification.service */ "./apps/notification/src/notification.service.ts");
+let NotificationModule = class NotificationModule {
 };
-exports.OrderServiceModule = OrderServiceModule;
-exports.OrderServiceModule = OrderServiceModule = __decorate([
+exports.NotificationModule = NotificationModule;
+exports.NotificationModule = NotificationModule = __decorate([
     (0, common_1.Module)({
-        imports: [
-            microservices_1.ClientsModule.register([
-                {
-                    name: constants_1.PAYMENT_SERVICE_RABBITMQ,
-                    transport: microservices_1.Transport.RMQ,
-                    options: {
-                        urls: ["amqp://guest:guest@localhost:5672"],
-                        queue: "payment_queue",
-                        queueOptions: {
-                            durable: true,
-                        },
-                    },
-                },
-            ]),
-            microservices_1.ClientsModule.register([
-                {
-                    name: constants_1.NOTIFICATION_SERVICE_RABBITMQ,
-                    transport: microservices_1.Transport.RMQ,
-                    options: {
-                        urls: ["amqp://guest:guest@localhost:5672"],
-                        queue: "notification_queue",
-                        queueOptions: {
-                            durable: true,
-                        },
-                    },
-                },
-            ]),
-        ],
-        controllers: [order_service_controller_1.OrderServiceController],
-        providers: [order_service_service_1.OrderServiceService],
+        imports: [],
+        controllers: [notification_controller_1.NotificationController],
+        providers: [notification_service_1.NotificationService],
     })
-], OrderServiceModule);
+], NotificationModule);
 
 
 /***/ }),
 
-/***/ "./apps/order-service/src/order-service.service.ts":
-/*!*********************************************************!*\
-  !*** ./apps/order-service/src/order-service.service.ts ***!
-  \*********************************************************/
+/***/ "./apps/notification/src/notification.service.ts":
+/*!*******************************************************!*\
+  !*** ./apps/notification/src/notification.service.ts ***!
+  \*******************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 
@@ -160,17 +117,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.OrderServiceService = void 0;
+exports.NotificationService = void 0;
 const common_1 = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
-let OrderServiceService = class OrderServiceService {
-    getData() {
+let NotificationService = class NotificationService {
+    getHello() {
         return 'Hello World!';
     }
 };
-exports.OrderServiceService = OrderServiceService;
-exports.OrderServiceService = OrderServiceService = __decorate([
+exports.NotificationService = NotificationService;
+exports.NotificationService = NotificationService = __decorate([
     (0, common_1.Injectable)()
-], OrderServiceService);
+], NotificationService);
 
 
 /***/ }),
@@ -236,28 +193,28 @@ var __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
 var exports = __webpack_exports__;
-/*!****************************************!*\
-  !*** ./apps/order-service/src/main.ts ***!
-  \****************************************/
+/*!***************************************!*\
+  !*** ./apps/notification/src/main.ts ***!
+  \***************************************/
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core_1 = __webpack_require__(/*! @nestjs/core */ "@nestjs/core");
-const order_service_module_1 = __webpack_require__(/*! ./order-service.module */ "./apps/order-service/src/order-service.module.ts");
 const microservices_1 = __webpack_require__(/*! @nestjs/microservices */ "@nestjs/microservices");
 const common_1 = __webpack_require__(/*! @nestjs/common */ "@nestjs/common");
+const notification_module_1 = __webpack_require__(/*! ./notification.module */ "./apps/notification/src/notification.module.ts");
 async function bootstrap() {
-    const app = await core_1.NestFactory.createMicroservice(order_service_module_1.OrderServiceModule, {
+    const app = await core_1.NestFactory.createMicroservice(notification_module_1.NotificationModule, {
         transport: microservices_1.Transport.RMQ,
         options: {
             urls: ["amqp://guest:guest@localhost:5672"],
-            queue: "order_queue",
+            queue: "notification_queue",
             queueOptions: {
                 durable: true
             }
         }
     });
     await app.listen();
-    common_1.Logger.log('order service is running');
+    common_1.Logger.log('notification service is running');
 }
 bootstrap();
 
