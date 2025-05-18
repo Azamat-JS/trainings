@@ -1,0 +1,1 @@
+export const PRODUCTS_PACKAGE_NAME = "products";
