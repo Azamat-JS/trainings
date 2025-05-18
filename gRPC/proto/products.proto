@@ -7,11 +7,11 @@ service ProductService {
 }
 
 message ProductRequest {
-   int32 productId = 1;
+   int32 productID = 1;
 }
 
 message ProductResponse {
-    int32 productId = 1;
+    int32 productID = 1;
     string name = 2;
     int32 price = 3;
 }

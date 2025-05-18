@@ -13,7 +13,7 @@ export class ProductController implements ProductServiceController {
     request: ProductRequest
   ): Promise<ProductResponse> | Observable<ProductResponse> | ProductResponse {
     return {
-      productId: 12,
+      productID: 12,
       name: "Laptop",
       price: 3000,
     };

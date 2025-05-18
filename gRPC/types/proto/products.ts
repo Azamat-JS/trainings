@@ -11,11 +11,11 @@ import { Observable } from "rxjs";
 export const protobufPackage = "products";
 
 export interface ProductRequest {
-  productId: number;
+  productID: number;
 }
 
 export interface ProductResponse {
-  productId: number;
+  productID: number;
   name: string;
   price: number;
 }

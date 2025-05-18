@@ -14,6 +14,6 @@ export class ProductController implements OnModuleInit{
 
     @Get()
     findOne(){
-        return this.productService.getProduct({productId: 12})
+        return this.productService.getProduct({productID: 12})
     }
 }
