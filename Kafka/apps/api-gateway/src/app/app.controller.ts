@@ -10,11 +10,6 @@ export class AppController {
     @Inject("KAFKA_SERVICE") private readonly kafkaClient: ClientKafka
   ) {}
 
-  @Get()
-  getData() {
-    return this.appService.getData();
-  }
-
   @Post('order')
   createOrder(@Body() order: CreateOrderDto){
     this.kafkaClient.emit('order-created', order);
