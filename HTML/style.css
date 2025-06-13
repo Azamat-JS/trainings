@@ -1,5 +1,8 @@
 h3 {
-   color: aqua; 
+   color: aqua;
+   text-transform: lowercase;
+   text-align: center;
+   /* text-decoration: underline; */
 }
 
 .my-button {
@@ -7,4 +10,15 @@ h3 {
     padding: 10px;
     font-size: 1.3em;
     background-color: rgb(100,200,100);
+}
+
+.lorem {
+    line-height: 20px;
+    /* letter-spacing: 10px; */
+    /* word-spacing: 40px; */
+}
+
+.anchor {
+ text-decoration: none;
+ color: brown;
 }
