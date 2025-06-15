@@ -17,3 +17,19 @@ div + p {
 div p {
     color: yellow
 }
+
+.hover:link {
+  color: red; 
+}
+
+.visited:visited {
+    color: green;
+}
+
+.hover:hover {
+    color: aqua;
+}
+
+.active:active {
+    color: orchid;
+}

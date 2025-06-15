@@ -1,0 +1,15 @@
+body {
+    background-color: darkblue;
+}
+
+.fa-image {
+color: rgb(185, 228, 33);
+}
+
+.fa-camera {
+    color: rgb(247, 177, 73);
+}
+
+.fa-clipboard {
+    color: aqua;
+}
