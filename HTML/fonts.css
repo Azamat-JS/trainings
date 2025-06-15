@@ -11,3 +11,12 @@ p {
     font-weight: bold;
     font-family: "Imperial Script", cursive;
 }
+
+.nature {
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.253),  rgba(220, 20, 60, 0.26), rgba(255, 166, 0, 0.295)), url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}

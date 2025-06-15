@@ -22,3 +22,12 @@ h3 {
  text-decoration: none;
  color: brown;
 }
+
+.container-color {
+  background-image: radial-gradient(skyblue, blue), url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
