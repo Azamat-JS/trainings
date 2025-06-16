@@ -1,0 +1,9 @@
+/* :is(section, article, aside, nav) :is(h1, h2, h3, h4, h5, h6){
+    color: rgb(38, 0, 255);
+} */
+
+/* section :is(h1, h2, h3){
+    color: blue
+} */
+
+

@@ -1,0 +1,21 @@
+body {
+    background: #333;
+    color: #fff;
+    padding: 2rem;
+}
+
+.section button:not([disabled]){
+    font-size: 20px;
+    background: rgb(233, 40, 6);
+}
+
+/* .section .article-title :not(.content){
+    color: slateblue;
+    font-size: 30px;
+} */
+
+aside a:not([href*="https://kun.uz"]){
+    color: yellow;
+    text-decoration: none;
+}
+
