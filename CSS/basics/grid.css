@@ -8,14 +8,39 @@
     height: 100vh;
     /* Grid stuff here */
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
     /* grid-template-columns: repeat(auto-fit, 200px); */
-    grid-template-columns: repeat(auto-fill, 200px);
-    grid-template-rows: repeat(auto-fit, 200px);
+    /* grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-rows: repeat(auto-fit, 200px); */
     /* grid-template-columns: 1fr minmax(300px, 1fr) 1fr; */
     /* grid-template-columns: [start] 100px 100px 100px [end]; */
+    grid-template-areas: 
+    "h h h h h"
+    "s s m m m"
+    "a a m m m"
+    "f f f f f";
     grid-gap: 10px;
+}
+
+header {
+    grid-area: h;
+}
+
+main {
+    grid-area: m;
+}
+
+section {
+    grid-area: s;
+}
+
+aside {
+    grid-area: a;
+}
+
+footer {
+    grid-area: f;
 }
 
 header {

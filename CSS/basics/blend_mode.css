@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: rgba(204, 0, 255, 0.336);
+}
+
+.container .img {
+    background-image: url('https://images.pexels.com/photos/7974/pexels-photo.jpg?cs=srgb&dl=pexels-life-of-pix-7974.jpg&fm=jpg'), url('https://i.rtings.com/assets/pages/IxCXzynA/best-apple-laptops-20241009-medium.jpg?format=auto'),linear-gradient(teal, violet);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh;
+    /* mix-blend-mode:multiply;
+    mix-blend-mode:darken;
+    mix-blend-mode:lighten;
+    mix-blend-mode: difference;
+    mix-blend-mode: exclusion; 
+    mix-blend-mode: luminosity; */
+    /* mix-blend-mode: overlay; */
+    /* background-blend-mode: multiply, screen; */
+}
+
+
