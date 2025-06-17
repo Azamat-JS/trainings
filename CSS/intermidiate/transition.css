@@ -1,0 +1,23 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 10px 20px;
+    color: brown;
+
+    /* Transition */
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function:cubic-bezier(.12,1.33,.75,.13);
+}
+
+a:hover{
+    background-color: brown;
+    color: white;
+}
