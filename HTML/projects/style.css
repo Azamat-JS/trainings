@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Moonrocks&display=swap');
+
+:root {
+  --main-color: #deab5f;
+  --primary-color: #312e2e
+}
+
+/* utility styles */
+
+button {
+    padding: 10px 30px;
+    background: var(--main-color);
+    border: none;
+    cursor: pointer;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #100e0f;
+}
+
+/* Nav start */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    padding-top: 15px;
+}
+
+li {
+    display: inline;
+    list-style: none;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+li a:hover {
+border-bottom: 2px solid var(--main-color);
+}
+
+/*  Nav end */
+
+
+/* Header Area */
+.header {
+    background: url();
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    font-family: "Playfair Display", serif;;
+}
