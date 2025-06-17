@@ -1,0 +1,23 @@
+/* Variables */
+
+:root {
+    --primary-color: white;
+    --font-size: 4rem;
+    --bgColor: crimson;
+    --padding: 20px
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: var(--font-size);
+}
+
+h1 {
+    background-color: var(--bgColor);
+    padding: var(--padding);
+}
+
+
