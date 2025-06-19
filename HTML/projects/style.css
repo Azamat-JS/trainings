@@ -33,6 +33,7 @@ nav {
     color: white;
     font-family: sans-serif;
     padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 li {
@@ -44,6 +45,7 @@ li a {
     color: white;
     text-decoration: none;
     margin-left: 40px;
+    padding-bottom: 10px;
 }
 
 li a:hover {
@@ -55,9 +57,117 @@ border-bottom: 2px solid var(--main-color);
 
 /* Header Area */
 .header {
-    background: url();
+    background: url(https://www.shutterstock.com/image-photo/cup-coffee-beans-on-dark-600nw-2472839479.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
-    font-family: "Playfair Display", serif;;
+    font-family: "Playfair Display", serif;
+    font-weight: normal;
+
+    /* Flex box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.main-headings {
+    position: absolute;
+    top: 7rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+}
+
+.primary-heading {
+    position: absolute;
+    bottom: 4rem;
+    font-size: 4rem;
+    word-spacing: 10px;
+    margin-bottom: -40px;
+}
+
+.main-btn {
+    position: absolute;
+    bottom: 2rem;
+    padding: 10px 30px;
+    margin-top: 20px;
+    background: transparent;
+    background: var(--main-color);
+    transform: translateY(60px);
+}
+
+/* Our story start */
+
+#our-story {
+    height: 100vh;
+    margin-top: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-container {
+    display: flex;
+}
+
+.img{
+    width: 400px;
+    height: 400px;
+    background: url(https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: translateX(-220px);
+}
+
+.title-style {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    color: white;
+    transform: translateX(-100px);
+    
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background: white;
+    transform: translateX(-120px);
+}
+
+.section-content p{
+    max-width: 500px;
+    color: white;
+    font-family: sans-serif;
+    line-height: 20px;
+    margin: 20px 0;
+}
+
+/* Our story end */
+
+/* Coffee start */
+.coffee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.content-section p{
+    max-width: 500px;
+    
+}
+
+.img-container-two {
+    width: 400px;
+    height: 400px;
 }
