@@ -113,3 +113,101 @@ header {
     background: var(--main-color);
     color: white;
 }
+
+.img-container {
+    border-radius: 50%;
+    box-shadow: 4px 7px 5px 2px #bcbaba;
+}
+
+.header-img {
+    border-radius: 100%;
+    background: url(https://www.zimrights.org.zw/wp-content/uploads/2021/08/hoodies-green-2-min.jpg);
+    background-position: top;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
+
+/* Header end */
+
+/* Section one start */
+.section-one{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.section-one-img{
+background: url(https://petstore.co.ke/wp-content/uploads/2024/08/Hoodie-front.jpeg);
+background-position: top;
+background-size: cover;
+}
+
+/* Section one ended */
+
+/* Products start */
+.products{
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.products .product-heading{
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.products .product-categories button {
+margin-right: 20px;
+margin-bottom: 2rem;
+}
+
+.products .product-items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    max-width: 60rem;
+}
+
+.products .product-items-container .item{
+ margin: 20px;
+}
+
+.products .product-items-container .item-layer{
+    background: #ebf1f0;
+    padding: 40px;
+    margin-right: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.products .product-items-container .item-layer img {
+    width: 150px;
+    height: 200px;
+}
+
+.products .product-items-container .item .item-name{
+    font-family: var(--primary-font);
+    margin-bottom: 10px;
+}
+
+.products .product-items-container .item .item-price {
+font-family: var(--primary-font);
+margin-bottom: 10px;
+}
+
+.products .product-items-container .item .view-product {
+    font-family: var(--primary-font);
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
