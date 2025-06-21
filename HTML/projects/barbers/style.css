@@ -35,4 +35,117 @@ ul li a{
 }
 /* Nav end */
 
-/* Header start */
+/* section one start */
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+.header-heading {
+font-size: 4rem;
+font-family: var(--main-font);
+font-weight: 900;
+}
+
+.header-sub-headings {
+   width: 70%;
+   font-family: var(--secondary-font);
+   color: rgb(82, 82, 82);
+   margin: 20px 0;
+}
+
+.header-img-container {
+    width: 30%;
+    height: 50vh;
+    position: relative;
+}
+
+.img-one {
+    position: absolute;
+    left: 10rem;
+}
+
+.img-two {
+    position: absolute;
+    left: 3rem;
+    top: 8rem;
+}
+
+.header-img {
+    width: 200px;
+    height: 300px;
+}
+
+.main-btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    background: var(--main-color);
+    color: white;
+    font-family: var(--secondary-font);
+}
+/* section one end */
+
+/* Experience section start */
+.experience {
+    height: 90vh;
+    margin-left: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.experience-img {
+    background: url("./images/barber-ex.avif");
+    background-size: cover;
+    width: 300px;
+    height: 350px;
+    margin-left: 50px;
+}
+
+.gray-heading {
+    color: gray;
+    font-family: var(--main-font);
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+/* Experience section end */
+
+/* social media section start */
+.social-media {
+    margin: 5rem;
+}
+
+.sm-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin-top: 10rem;
+    justify-content: center;
+}
+
+.follow {
+    padding: 20px;
+    background: var(--main-color);
+    color: white;
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    margin-right: 3rem;
+    text-align: center;
+}
+/* social media section end */
