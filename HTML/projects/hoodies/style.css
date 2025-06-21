@@ -211,3 +211,62 @@ margin-bottom: 10px;
     color: var(--main-color);
     border-bottom: 1px solid var(--main-color);
 }
+/* Products section end */
+
+/* Customer review start */
+.customer-reviews{
+margin-top: 5rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+}
+
+.customer {
+    text-align: center;
+}
+
+.customer-heading {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.customer-reviews .customer-description {
+    font-size: 12px;
+    margin-top: 20px;
+    max-width: 200px;
+    text-align: center;
+    margin: 10px;
+    font-family: var(--primary-font);
+}
+
+.customer .customer-img .img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.customer .img-one {
+    background: url(https://stockai-bucket.apyhi.com/images/334baf32-8bbf-4256-b405-8d858ac7540c_0_1.webp);
+}
+
+.customer .img-two {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuPzAOB6d0BxKBBN7Kr5fCEwML4vGslJXX2w&s);
+}
+
+.customer .img-three {
+    background: url(https://www.cartoonize.net/wp-content/uploads/2024/05/photo-to-cartoon-cartoonizer-by-Colorcinch.jpg);
+}
+
+.customer .img-four {
+    background: url(https://easydrawingguides.com/wp-content/uploads/2023/05/how-to-draw-mr-bean-featured-image.png);
+}
+
+/* Customer review end */
