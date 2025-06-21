@@ -270,3 +270,59 @@ align-items: center;
 }
 
 /* Customer review end */
+
+/* Footer start */
+footer {
+    background: #1f1e1e;
+    margin-top: 10rem;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--primary-font);
+}
+
+footer .container .footer-heading {
+    margin-bottom: 3rem;
+}
+
+footer .container .footer-primary-heading {
+    font-weight: normal;
+    font-size: 15px;
+    margin-top: 20px;
+}
+/* Footer end */
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+    header {
+        height: 120vh;
+        text-align: center;
+    }
+
+    .section-one {
+        height: 120vh;
+        text-align: center;
+    }
+
+    .header-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .main-headings {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .primary-headings {
+        width: 400px;
+    }
+
+    .customer .customer-img .img {
+        width: 150px;
+        height: 150px;
+    }
+}
