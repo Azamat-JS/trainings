@@ -101,3 +101,55 @@ header {
     box-shadow: 2px 2px 2px 2px var(--main-color);
 }
 /* Header end */
+
+/* Popularity start */
+.popularity {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.popularity div {
+    margin-right: 5rem;
+}
+
+.popularity div h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #34343e;
+    font-family: var(--main-color);
+}
+
+.popularity div p {
+    color: #34343e;
+    font-family: sans-serif;
+}
+/* Popularity end */
+
+/* Products start */
+.products-container {
+    height: 100vh;
+}
+
+.products-heading {
+    text-align:center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    font-size: 4rem;
+    color: #0000004f;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
