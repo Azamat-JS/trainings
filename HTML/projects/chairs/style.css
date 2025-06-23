@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Moonrocks&display=swap');
+/* Resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #e3e8e4;
+    --primary-color: #363636;
+    --main-font:" Playfair Display", serif;
+}
+
+/* Nav start */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+ul li{
+    display: inline;
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    margin-left: 4rem;
+}
+
+ul li a:hover {
+ border-bottom: 2px solid var(--primary-color);
+ padding-bottom: 10px;
+}
+
+.btn-fill {
+    padding: 10px 30px;
+    background: var(--primary-color);
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+}
+/* Nav end */
+
+/* Header start */
+.btn-outline {
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-container {
+    margin-left: 6rem;
+}
+
+.main-headings{
+    font-size: 4rem;
+    font-family: var(--main-color);
+    color: #0000004f;
+    margin-bottom: 2rem;
+}
+
+.main-headings span {
+    color: black;
+}
+
+.primary-heading{
+    max-width: 500px;
+    font-family: sans-serif;
+    line-height: 25px;
+    margin-bottom: 2rem;
+}
+
+.img-container {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.img-container img {
+    width: 500px;
+    height: 500px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 2px 2px var(--main-color);
+}
+/* Header end */
+
+/* Popularity start */
+.popularity {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.popularity div {
+    margin-right: 5rem;
+}
+
+.popularity div h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #34343e;
+    font-family: var(--main-color);
+}
+
+.popularity div p {
+    color: #34343e;
+    font-family: sans-serif;
+}
+/* Popularity end */
+
+/* Products start */
+
+.products-heading {
+    text-align:center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    font-size: 4rem;
+    color: #0000004f;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.product .product-img-layer {
+    background-color: white;
+    box-shadow: 2px 2px 5px 2px rgb(155, 154, 154);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.product .product-img-layer .img {
+    width: 200px;
+    height: 200px;
+}
+
+.product .product-img-layer .img-one {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB_l-hJ6K28lcS-G_1o_gFBnL-UbNHgs07Ww&s);
+    background-size: cover;
+    border-radius: 100%;
+    background-position: center;
+}
+
+.product .product-img-layer .img-two {
+    background: url(https://a.1stdibscdn.com/1960s-danish-wooden-chair-with-upholstered-seat-and-back-for-sale/f_52802/f_398033521716230180112/f_39803352_1716230180666_bg_processed.jpg?width=240);
+    background-size: cover;
+    border-radius: 100%;
+    background-position: center;
+}
+
+.product .product-img-layer .img-three {
+    background: url(https://mustsociete.com/media/cache/dakzilla_intervention/8d82fe91443bfd5400ccbb048962f70b/347200-fauteuil-divolounge-1_1.jpeg);
+    background-size: cover;
+    border-radius: 100%;
+    background-position: center;
+}
+
+.product-content {
+    background: var(--primary-color);
+    padding: 27px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: white;
+}
+
+.product-content .product-name {
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+.b-container {
+    text-align: center;
+}
+
+.b-container button {
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+/* Products end */
+
+/* Why Choose us start */
+.why-us {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+margin-top: 10rem;
+}
+
+.why-us .img-layer .img {
+    width: 400px;
+    height: 400px;
+    background: url(https://www.nordicfusion.com.au/cdn/shop/files/65550155017_1_0bea135d-722e-4f63-8e7e-bb13453a13d4.jpg?v=1739933435&width=1445);
+    background-size: cover;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.card {
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.card.card-fill {
+    background: #e3e8e490;
+    position: relative;
+}
+
+.card.card.card-fill .star {
+    width: 10px;
+    height: 10px;
+    padding: 15px;
+    border-radius: 100%;
+    background: var(--primary-color);
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: white;
+}
+
+.card h1 {
+    color: black;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+.card p {
+    color: #999;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-top: 20px;
+}
+/* Why Choose us end */
+
+/* Feature start */
+.features {
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* Feature end */
+
+/* Footer start */
+footer {
+    background: var(--primary-color);
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.footer .logo-container h1 {
+    font-size: 4rem;
+    font-family: var(--main-font);
+    margin-bottom: 20px;
+}
+
+footer .logo-container p {
+    max-width: 400px;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+footer .about-company {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .about-company .container {
+    margin-right: 40px;
+    border-top: 20px;
+}
+
+.about-company .container h1 {
+    margin-bottom: 50px;
+}
+
+.about-company .container p{
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+/* Footer end */
+
+/* Responsiveness */
+@media only screen and (max-width: 1150px) {
+    .img-container {
+        width: 340px;
+        height: 340px;
+    }
+
+    .d-none {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        height: 120vh;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header .content-container {
+        margin-top: 6rem;
+        margin-top: 4rem;
+        margin-left: 0;
+    }
+
+    .popularity {
+        margin-top: 18rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .primary-heading {
+        width: 350px;
+    }
+
+    .img-container {
+        width: 350px;
+        height: 350px;
+    }
+
+    .popularity div h1 {
+        font-size: 2rem;
+    }
+
+    .popularity div {
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 7rem;
+    }
+
+    .main-headings {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .cards {
+        margin-right: 5rem;
+    }
+
+    .card-fill{
+        margin-left: 10px;
+    }
+}
+
