@@ -3,3 +3,5 @@
 
 ## HTML && CSS video you tube includes flexbox froggy game: 5:30:00
 ## https://www.youtube.com/watch?v=bWACo_pvKxg&t=7240s
+
+## Clips for Createtive image project: https://bennettfeely.com/clippy/
