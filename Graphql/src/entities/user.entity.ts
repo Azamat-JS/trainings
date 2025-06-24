@@ -1,14 +1,11 @@
 import { Field, Int, ObjectType } from "@nestjs/graphql";
-import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
-import { Profile } from "./profile.entity";
-import { Post } from "./post.entity";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Role } from "./role.enum";
+
 
 @ObjectType()
 @Entity('users')
 export class User {
-    constructor(partial?: Partial<User>){
-        Object.assign(this, partial)
-    }
 
     @Field(() => Int)
     @PrimaryGeneratedColumn()
@@ -18,15 +15,16 @@ export class User {
     @Column()
     username: string;
 
+    @Field(() => Role)
+    @Column({
+        type: 'enum',
+        enum: Role,
+        default: Role.USER
+    })
+    role: Role;
+
     @Field()
     @Column()
     email: string;
 
-    @Field(() => Profile)
-    @OneToOne(() => Profile, (profile) => profile.user, {cascade: true})
-    profile: Profile;
-
-    @Field(() => [Post])
-    @OneToMany(() => Post, (post) => post.user)
-    posts: Post[];
 }

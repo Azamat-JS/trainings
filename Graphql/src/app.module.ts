@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import {TypeOrmModule} from '@nestjs/typeorm'
 import { UserModule } from './user/user.module';
+import { User } from './entities/user.entity';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { UserModule } from './user/user.module';
       password: 'azamat998877',
       synchronize:true,
       autoLoadEntities: true,
-      entities: []
+      entities: [User]
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
     driver: ApolloDriver,

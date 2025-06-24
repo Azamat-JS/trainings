@@ -2,35 +2,37 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Profile {
-  id: Int!
-  bio: String!
-  avatar: String!
-  user: User!
-}
-
-type Tag {
-  id: Int!
-  name: String!
-  posts: [Post!]!
-}
-
-type Post {
-  id: Int!
-  title: String!
-  content: String!
-  user: User!
-  tags: [Tag!]!
-}
-
 type User {
   id: Int!
   username: String!
+  role: Role!
   email: String!
-  profile: Profile!
-  posts: [Post!]!
+}
+
+enum Role {
+  ADMIN
+  USER
 }
 
 type Query {
   users: [User!]!
+  user(id: Int!): User!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  updateUser(id: Int!, updateUserInput: UpdateUserInput!): User!
+  removeUser(id: Int!): String!
+}
+
+input CreateUserInput {
+  username: String!
+  email: String!
+  role: Role!
+}
+
+input UpdateUserInput {
+  username: String
+  email: String
+  role: Role
 }
