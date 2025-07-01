@@ -27,15 +27,18 @@ export class ChatGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
   @SubscribeMessage("send-message")
   handleSendMessage(@MessageBody() payload: ChatDto) {
-    const message = this.chatService.sendMessage(payload.username, payload.message);
-    this.server.emit('new-message', message);
+    const message = this.chatService.sendMessage(
+      payload.username,
+      payload.message,
+    );
+    this.server.emit("new-message", message);
   }
 
-  @SubscribeMessage('delete-message')
-  handleDeleteMessage(@MessageBody() messageId: string){
+  @SubscribeMessage("delete-message")
+  handleDeleteMessage(@MessageBody() messageId: string) {
     const success = this.chatService.deleteMessage(messageId);
-    if(success){
-      this.server.emit('message-deleted', messageId)
+    if (success) {
+      this.server.emit("message-deleted", messageId);
     }
   }
 }
