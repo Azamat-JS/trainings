@@ -1,0 +1,41 @@
+.container {
+  margin: 50px;
+}
+
+.toggle {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle input {
+  display: none;
+}
+
+.field {
+  width: 100px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.knob {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.3s ease;
+}
+
+/* Checked state */
+.toggle input:checked + .field {
+  background-color: green;
+}
+
+.toggle input:checked + .field .knob {
+  left: 65px;
+}
