@@ -1,0 +1,13 @@
+.parent div:nth-child(2) {
+  color: red;
+}
+
+
+.parent div:nth-of-type(2) {
+  color: green;
+}
+
+
+.parent > .child {
+  margin: 10px;
+}
