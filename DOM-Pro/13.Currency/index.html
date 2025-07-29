@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+
+        <form id="converter-form">
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" placeholder="Enter amount" id="amount" required />
+            </div>
+
+            <div class="form-group">
+                <label for="from-currency">From</label>
+                <select id="from-currency"></select>
+            </div>
+
+            <div class="form-group">
+                <label for="to-currency">To</label>
+                <select id="to-currency"></select>
+            </div>
+
+            <button type="submit">Convert</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
