@@ -13,7 +13,6 @@ async function fetchCurrencies() {
   const response = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
   const data = await response.json();
 
-  console.log(data);
   const currencyOptions = Object.keys(data.rates);
 
   currencyOptions.forEach((currency) => {
@@ -36,8 +35,8 @@ async function convertCurrency(e) {
   const fromCurrencyValue = fromCurrency.value;
   const toCurrencyValue = toCurrency.value;
 
-  if (amount < 0) {
-    alert("Please ener a valid amount");
+  if (amount <= 0) {
+    alert("Please enter a valid amount");
     return;
   }
 
