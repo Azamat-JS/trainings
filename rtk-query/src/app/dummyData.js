@@ -14,7 +14,7 @@ export const productsApi = createApi({
     
     addNewProduct: builder.mutation({
         query: (newProduct) => ({
-            url: `products/add`,
+            url: `/products/add`,
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: newProduct
@@ -28,9 +28,16 @@ export const productsApi = createApi({
             headers: {'Content-Type' : 'application/json'},
             body: updatedProduct
         })
+    }),
+
+    deleteProduct: builder.mutation({
+        query: (id) => ({
+            url: `/products/${id}`,
+            method: "DELETE",
+        })
     })
   }),
 });
 
 // Export the auto-generated hook
-export const { useGetAllProductsQuery, useGetProductByIdQuery, useAddNewProductMutation, useUpdateProductMutation } = productsApi;
+export const { useGetAllProductsQuery, useGetProductByIdQuery, useAddNewProductMutation, useUpdateProductMutation, useDeleteProductMutation } = productsApi;

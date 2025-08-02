@@ -13,6 +13,7 @@ const SpecificProduct = () => {
   return (
     <div>
         <img width={300} src={data?.images[0]} alt="" />
+        <h1>{data?.title}</h1>
       <h1>{data?.brand}</h1>
       <h2>{data?.category}</h2>
     </div>
