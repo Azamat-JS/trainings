@@ -22,15 +22,15 @@ li{
     justify-content: center;
     border-radius: 20px;
     opacity: 0;
-    /* translate: -50%; */
-    scale: 0;
+    translate: -50%;
+    /* scale: 0; */
     transition: 0.6s ease;
 
 }
 
 li.show{
   opacity: 1;  
-  /* translate: 0; */
-  scale: 1;
+  translate: 0;
+  /* scale: 1; */
 }
 
