@@ -38,7 +38,6 @@ export const fetchHabits = createAsyncThunk("habits/fetchHabits", async() => {
             createdAt: new Date().toISOString()
         },
     ];
-    console.log(mockHabits)
     return mockHabits;
 })
 
