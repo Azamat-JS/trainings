@@ -72,11 +72,37 @@
 //     })
 // );
 
-async function loadData() {
-    console.time("loadData")
+// async function loadData() {
+//     console.time("loadData")
 
-    const data = await fetch('https://fakestoreapi.com/products')
-    console.timeEnd("loadData")
-}
+//     const data = await fetch('https://fakestoreapi.com/products')
+//     console.timeEnd("loadData")
+// }
 
-loadData()
+// loadData()
+
+const arr = ["10", "20", "30"];
+
+const numbers = arr.map(Number);
+
+const newString = arr.join(", ")
+console.log(newString)
+
+console.log(numbers);
+// [10, 20, 30]
+
+const text = "apple,banana,orange";
+
+const result = text.split(",");
+
+console.log(result);
+// ["apple", "banana", "orange"]
+
+"hello".split("")
+// ["h", "e", "l", "l", "o"]
+
+"hello world".split(" ")
+// ["hello", "world"]
+
+"1,2,3,4".split(",")
+// ["1", "2", "3", "4"]
