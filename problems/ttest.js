@@ -25,14 +25,50 @@
 // );
 
 
-let str = "I love JavaScript";
+// let str = "I love JavaScript";
 
-let result = str.match(/Java(Script)/);
+// let result = str.match(/Java(Script)/);
 
-console.log(result[0]);
-console.log(result[1]);
-console.log(result.length);
+// console.log(result[0]);
+// console.log(result[1]);
+// console.log(result.length);
 
-// Additional information:
-console.log(result.index);
-console.log(result.input);  
+// // Additional information:
+// console.log(result.index);
+// console.log(result.input);  
+
+
+// let str = "I love JavaScript";
+
+// let result = str.match(/HTML/);
+
+// console.log(result);
+// console.log(result.length); 
+
+
+
+// let str = '<h1>Hello, world!</h1>';
+// let regexp = /<(.*?)>/g;
+
+// let matchAll = str.matchAll(regexp);
+
+// console.log(matchAll);
+
+// matchAll = Array.from(matchAll);
+
+// let firstMatch = matchAll[0];
+// console.log(firstMatch[0]);
+// console.log(firstMatch[1]);
+// console.log(firstMatch.index); 0
+// console.log(firstMatch.input);
+
+
+// async function fetchData(url) {
+//     const data = await fetch(url);
+//     const products = await data.json();
+//     return products
+// }
+
+// const result = await fetchData("https://fakestoreapi.com/products");
+
+// console.log(result)
