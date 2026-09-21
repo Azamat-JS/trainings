@@ -1,0 +1,33 @@
+[
+  {
+    "ism": "Ali",
+    "yosh": 25,
+    "shahar": "Toshkent"
+  },
+  {
+    "odamlar": [
+      {
+        "ism": "Ali",
+        "yosh": 25
+      },
+      {
+        "ism": "Vali",
+        "yosh": 30
+      },
+      {
+        "ism": "Olim",
+        "yosh": 28
+      }
+    ]
+  },
+  {
+    "ism": "Ali",
+    "yosh": 25,
+    "shahar": "Toshkent"
+  },
+  {
+    "ism": "Vali",
+    "yosh": 30,
+    "shahar": "Samarqand"
+  }
+]
