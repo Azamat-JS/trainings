@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-section">
+            <h1>📱 Device Features</h1>
+            <div class="main-btns">
+                <button class="btns location-btn">📍 Location</button>
+                <button class="btns battery-btn" onclick="getBattery()">🔋 Battery</button>
+                <button class="btns camera-btn">📸 Camera</button>
+            </div>
+
+            <p class="show-error"></p>
+
+            <h1 class="show-result"></h1>
+            <video id="webcam" autoplay playsinline width="640" height="480"></video>
+        </div>
+
+        <section>
+            <button>Home</button>
+            <button>About</button>
+            <button>Contact</button>
+            <button>Copy</button>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
