@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- Left side: editors -->
+    <section class="editors">
+
+      <div class="editor">
+        <label class="editor-title" for="html-code">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt=""
+            width="20" height="20">
+          HTML
+        </label>
+        <textarea id="html-code" spellcheck="false"></textarea>
+      </div>
+
+      <div class="editor">
+        <label class="editor-title" for="css-code">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" width="20"
+            height="20">
+          CSS
+        </label>
+        <textarea id="css-code" spellcheck="false"></textarea>
+      </div>
+
+      <div class="editor">
+        <label class="editor-title" for="js-code">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+            alt="" width="20" height="20">
+          JS
+        </label>
+        <textarea id="js-code" spellcheck="false"></textarea>
+      </div>
+
+    </section>
+
+    <!-- Right side: result -->
+    <section class="output">
+      <div class="output-title">&#9654; Output</div>
+      <iframe id="output" title="Output"></iframe>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
